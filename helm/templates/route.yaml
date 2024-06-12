@@ -1,0 +1,14 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: document-search-poc
+  labels:
+    app.kubernetes.io/name: document-search-poc
+spec:
+  to:
+    kind: Service
+    name: document-search-poc
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge

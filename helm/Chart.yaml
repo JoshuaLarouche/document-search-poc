@@ -1,0 +1,4 @@
+apiVersion: v2
+name: document-search-poc
+description: A Helm chart for deploying document-search-poc
+version: 0.1.0

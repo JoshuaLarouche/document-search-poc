@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: document-search-poc
+  labels:
+    app.kubernetes.io/name: document-search-poc
+spec:
+  selector:
+    app.kubernetes.io/name: document-search-poc
+  ports:
+    - protocol: TCP
+      port: {{ .Values.service.port }}
+      targetPort: 8080
