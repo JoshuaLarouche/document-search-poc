@@ -65,7 +65,7 @@ jobs:
 
       - name: Deploy with Helm
         run: |
-          helm upgrade --install doc-search-poc ./helm \
+          helm upgrade --install document-search-poc ./helm \
             --namespace aebbdd-test \
             --set image.repository=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }} \
             --set image.tag=${{ needs.build_and_push.outputs.image_tag }}
