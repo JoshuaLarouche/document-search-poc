@@ -1,0 +1,1169 @@
+[
+    {
+      "id": "1",
+      "filename": "2022_07_24_SD_002-01_FDD_App_M1.12_Activities_4.16_00_FINAL.docx",
+      "original_source_path": "https://bcgov.sharepoint.com/sites/SDPR-ISD-CS/Shared%20Documents/4.%20Operations/FDD/Release%204.16/ICM/Application/Activities/2022_07_24_SD_002-01_FDD_App_M1.12_Activities_4.16_00_FINAL.docx",
+      "date_created": "2010-01-04T00:00:00.000Z",
+      "date_last_modified": "2024-01-29T00:00:00.000Z",
+      "draft_status": "Final",
+      "ministries": [
+        {
+          "ministry_name": "Ministry of Technology, Innovation and Citizens’ Services"
+        },
+        {
+          "ministry_name": "Ministry of Children and Family Development"
+        },
+        {
+          "ministry_name": "Ministry of Social Development and Social Innovation"
+        }
+      ],
+      "division": "Employment and Labour Market Services Division",
+      "authors": [
+        {
+          "first_name": "Kahlil",
+          "last_name": "Amlani"
+        },
+        {
+          "first_name": "Jonathan",
+          "last_name": "To"
+        },
+        {
+          "first_name": "Ada",
+          "last_name": "Tsai"
+        },
+        {
+          "first_name": "Pooja",
+          "last_name": "Mehta"
+        },
+        {
+          "first_name": "Ankit",
+          "last_name": "Garg"
+        },
+        {
+          "first_name": "Vishesh",
+          "last_name": "Choudhary"
+        },
+        {
+          "first_name": "Sarah",
+          "last_name": "Smith"
+        },
+        {
+          "first_name": "Alain",
+          "last_name": "Guilbault"
+        },
+        {
+          "first_name": "Prashant",
+          "last_name": "Bhardwaj"
+        },
+        {
+          "first_name": "Asad",
+          "last_name": "Khawaja"
+        },
+        {
+          "first_name": "Alan",
+          "last_name": "Thonas Oommen"
+        },
+        {
+          "first_name": "John",
+          "last_name": "Wesly"
+        },
+        {
+          "first_name": "Jonathan",
+          "last_name": "Savidant"
+        }
+      ],
+      "document_owner": 
+        {
+          "first_name": "Adam",
+          "last_name": "Spain",
+          "title": "Functional Lead"
+        },
+      "reviewers": [
+        {
+          "first_name": "Yvonne",
+          "last_name": "Muraro",
+          "title": "Business Lead",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Rob",
+          "last_name": "Byers",
+          "title": "Director",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Alison",
+          "last_name": "Bath",
+          "title": "Director",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Sarah",
+          "last_name": "Smith",
+          "title": "Change and Training Lead",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Mary",
+          "last_name": "Laboucane",
+          "title": "Manager",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Linda",
+          "last_name": "Turner",
+          "title": "Legacy Lead",
+          "ministry": ""
+        },
+        {
+          "first_name": "Arif",
+          "last_name": "Lalani",
+          "title": "Executive Director, Provincial Services",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Marcin",
+          "last_name": "Zaranski",
+          "title": "Executive Director",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Sue",
+          "last_name": "Wilson",
+          "title": "Project Manager",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Sheila",
+          "last_name": "Robinson",
+          "title": "Senior Executive Director of Practice",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Donna",
+          "last_name": "Mathiason",
+          "title": "Director",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Anne",
+          "last_name": "Minnings",
+          "title": "Chief Financial Officer",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Martin",
+          "last_name": "Wright",
+          "title": "Chief Information Officer and Executive Director",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Laura",
+          "last_name": "Nackman",
+          "title": "Business Lead",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        }
+      ],
+      "deliverable_approvers": [
+        {
+          "first_name": "Jill",
+          "last_name": "Kot",
+          "title": "ICM Executive Lead, Province",
+          "ministry": ""
+        },
+        {
+          "first_name": "Marcin",
+          "last_name": "Zaranski",
+          "title": "Executive Director",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Debi",
+          "last_name": "Upton",
+          "title": "Executive Director",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Beverly",
+          "last_name": "Dicks",
+          "title": "Assistant Deputy Minister",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Dexter",
+          "last_name": "Ratcliff",
+          "title": "Executive Director",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        }
+      ],
+      "overview": "This document outlines the functional design for Activity Management. It presents the Business Requirements mapping and then it focuses on providing functional specification on a screen by screen basis.  It also references background processing that may be required to support this module; these background processes can be found in the Business Logic section of this document.",
+      "link": "https://bcgov.sharepoint.com/sites/SDPR-ISD-CS/Shared%20Documents/4.%20Operations/FDD/Release%204.16/ICM/Application/Activities/2022_07_24_SD_002-01_FDD_App_M1.12_Activities_4.16_00_FINAL.docx",
+      "body": "blah blah blah to be added later"
+    },
+    {
+      "id": "2",
+      "filename": "Archive 2018_05_23_SD_002-01_FDD_App_M1.11_Activities_4.8_00_Archive.docx",
+      "original_source_path": "https://bcgov.sharepoint.com/sites/SDPR-ISD-CS/Shared%20Documents/4.%20Operations/FDD/Release%204.16/ICM/Application/Activities/Archive%202018_05_23_SD_002-01_FDD_App_M1.11_Activities_4.8_00_Archive.docx",
+      "date_created": "2010-01-04T00:00:00.000Z",
+      "date_last_modified": "2019-04-05T00:00:00.000Z",
+      "draft_status": "Archive",
+      "ministries": [
+        {
+          "ministry_name": "Ministry of Technology, Innovation and Citizens’ Services"
+        },
+        {
+          "ministry_name": "Ministry of Children and Family Development"
+        },
+        {
+          "ministry_name": "Ministry of Social Development and Social Innovation"
+        }
+      ],
+      "division": "Employment and Labour Market Services Division",
+      "authors": [
+        {
+          "first_name": "Kahlil",
+          "last_name": "Amlani"
+        },
+        {
+          "first_name": "Jonathan",
+          "last_name": "To"
+        },
+        {
+          "first_name": "Ada",
+          "last_name": "Tsai"
+        },
+        {
+          "first_name": "Pooja",
+          "last_name": "Mehta"
+        },
+        {
+          "first_name": "Ankit",
+          "last_name": "Garg"
+        },
+        {
+          "first_name": "Vishesh",
+          "last_name": "Choudhary"
+        },
+        {
+          "first_name": "Sarah",
+          "last_name": "Smith"
+        },
+        {
+          "first_name": "Alain",
+          "last_name": "Guilbault"
+        },
+        {
+          "first_name": "Prashant",
+          "last_name": "Bhardwaj"
+        },
+        {
+          "first_name": "Asad",
+          "last_name": "Khawaja"
+        },
+        {
+          "first_name": "Alan",
+          "last_name": "Thonas Oommen"
+        },
+        {
+          "first_name": "John",
+          "last_name": "Wesly"
+        }
+      ],
+      "document_owner": 
+        {
+          "first_name": "Adam",
+          "last_name": "Spain",
+          "title": "Functional Lead"
+        },
+      "reviewers": [
+        {
+          "first_name": "Yvonne",
+          "last_name": "Muraro",
+          "title": "Business Lead",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Rob",
+          "last_name": "Byers",
+          "title": "Director",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Alison",
+          "last_name": "Bath",
+          "title": "Director",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Sarah",
+          "last_name": "Smith",
+          "title": "Change and Training Lead",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Mary",
+          "last_name": "Laboucane",
+          "title": "Manager",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Linda",
+          "last_name": "Turner",
+          "title": "Legacy Lead",
+          "ministry": ""
+        },
+        {
+          "first_name": "Arif",
+          "last_name": "Lalani",
+          "title": "Executive Director, Provincial Services",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Marcin",
+          "last_name": "Zaranski",
+          "title": "Executive Director",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Sue",
+          "last_name": "Wilson",
+          "title": "Project Manager",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Sheila",
+          "last_name": "Robinson",
+          "title": "Senior Executive Director of Practice",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Donna",
+          "last_name": "Mathiason",
+          "title": "Director",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Anne",
+          "last_name": "Minnings",
+          "title": "Chief Financial Officer",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Martin",
+          "last_name": "Wright",
+          "title": "Chief Information Officer and Executive Director",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Laura",
+          "last_name": "Nackman",
+          "title": "Business Lead",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        }
+      ],
+      "deliverable_approvers": [
+        {
+          "first_name": "Jill",
+          "last_name": "Kot",
+          "title": "ICM Executive Lead, Province",
+          "ministry": ""
+        },
+        {
+          "first_name": "Marcin",
+          "last_name": "Zaranski",
+          "title": "Executive Director",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Debi",
+          "last_name": "Upton",
+          "title": "Executive Director",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Beverly",
+          "last_name": "Dicks",
+          "title": "Assistant Deputy Minister",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Dexter",
+          "last_name": "Ratcliff",
+          "title": "Executive Director",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        }
+      ],
+      "overview": "This document outlines the functional design for Activity Management. It presents the Business Requirements mapping and then it focuses on providing functional specification on a screen by screen basis.  It also references background processing that may be required to support this module; these background processes can be found in the Business Logic section of this document.",
+      "link": "https://bcgov.sharepoint.com/sites/SDPR-ISD-CS/Shared%20Documents/4.%20Operations/FDD/Release%204.16/ICM/Application/Activities/Archive%202018_05_23_SD_002-01_FDD_App_M1.11_Activities_4.8_00_Archive.docx",
+      "body": "blah blah blah to be added later"
+    },
+    {
+      "id": "3",
+      "filename": "2023_10_12_SD-002-01_FDD_App_M1.11_Activity_Plans_4.16_00_FINAL_CFD.docx",
+      "original_source_path": "https://bcgov.sharepoint.com/sites/SDPR-ISD-CS/Shared%20Documents/4.%20Operations/FDD/Release%204.16/ICM/Application/Activity%20Plans/2023_10_12_SD-002-01_FDD_App_M1.11_Activity_Plans_4.16_00_FINAL_CFD.docx",
+      "date_created": "2011-05-23T00:00:00.000Z",
+      "date_last_modified": "2024-01-31T00:00:00.000Z",
+      "draft_status": "Final",
+      "ministries": [
+        {
+          "ministry_name": "Ministry of Technology, Innovation and Citizens’ Services"
+        },
+        {
+          "ministry_name": "Ministry of Children and Family Development"
+        },
+        {
+          "ministry_name": "Ministry of Social Development and Social Innovation"
+        }
+      ],
+      "division": "Employment and Labour Market Services Division",
+      "authors": [
+        {
+          "first_name": "Sweta",
+          "last_name": "Nandagiri"
+        },
+        {
+          "first_name": "Pasupathy",
+          "last_name": "Naresh Trilok"
+        },
+        {
+          "first_name": "Chieh",
+          "last_name": "Min"
+        },
+        {
+          "first_name": "Zameer",
+          "last_name": "Nisar"
+        },
+        {
+          "first_name": "Kahlil",
+          "last_name": "Amlani"
+        },
+        {
+          "first_name": "Ada",
+          "last_name": "Tsai"
+        },
+        {
+          "first_name": "Asad",
+          "last_name": "Khawaja"
+        },
+        {
+          "first_name": "Alan",
+          "last_name": "Thonas Oommen"
+        }
+      ],
+      "document_owner": 
+        {
+          "first_name": "Adam",
+          "last_name": "Spain",
+          "title": "Functional Lead"
+        },
+      "reviewers": [
+        {
+          "first_name": "Yvonne",
+          "last_name": "Muraro",
+          "title": "Business Lead",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Rob",
+          "last_name": "Byers",
+          "title": "Director",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Alison",
+          "last_name": "Bath",
+          "title": "Director",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Sarah",
+          "last_name": "Smith",
+          "title": "Change and Training Lead",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Mary",
+          "last_name": "Laboucane",
+          "title": "Manager",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Linda",
+          "last_name": "Turner",
+          "title": "Legacy Lead",
+          "ministry": ""
+        },
+        {
+          "first_name": "Arif",
+          "last_name": "Lalani",
+          "title": "Executive Director, Provincial Services",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Marcin",
+          "last_name": "Zaranski",
+          "title": "Executive Director",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Sue",
+          "last_name": "Wilson",
+          "title": "Project Manager",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Sheila",
+          "last_name": "Robinson",
+          "title": "Senior Executive Director of Practice",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Donna",
+          "last_name": "Mathiason",
+          "title": "Director",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Anne",
+          "last_name": "Minnings",
+          "title": "Chief Financial Officer",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Martin",
+          "last_name": "Wright",
+          "title": "Chief Information Officer and Executive Director",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Laura",
+          "last_name": "Nackman",
+          "title": "Business Lead",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        }
+      ],
+      "deliverable_approvers": [
+        {
+          "first_name": "Jill",
+          "last_name": "Kot",
+          "title": "ICM Executive Lead, Province",
+          "ministry": ""
+        },
+        {
+          "first_name": "Marcin",
+          "last_name": "Zaranski",
+          "title": "Executive Director",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Debi",
+          "last_name": "Upton",
+          "title": "Executive Director",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Beverly",
+          "last_name": "Dicks",
+          "title": "Assistant Deputy Minister",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Dexter",
+          "last_name": "Ratcliff",
+          "title": "Executive Director",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        }
+      ],
+      "overview": "This appendix outlines the functional specifications for the activity plan templates associated with Cases, Incidents and Service Requests within Phase 3 scope. It also references workflows that may be required to support the activity plan templates.",
+      "link": "https://bcgov.sharepoint.com/sites/SDPR-ISD-CS/Shared%20Documents/4.%20Operations/FDD/Release%204.16/ICM/Application/Activity%20Plans/2023_10_12_SD-002-01_FDD_App_M1.11_Activity_Plans_4.16_00_FINAL_CFD.docx",
+      "body": "blah blah blah to be added later"
+    },
+    {
+      "id": "4",
+      "filename": "2022_08_10_SD-002-01_FDD_App_M1.11_Activity_Plans_4.14_00_FINAL_CFD.docx",
+      "original_source_path": "https://bcgov.sharepoint.com/sites/SDPR-ISD-CS/Shared%20Documents/4.%20Operations/FDD/Release%204.16/ICM/Application/Activity%20Plans/Archive/2022_08_10_SD-002-01_FDD_App_M1.11_Activity_Plans_4.14_00_FINAL_CFD.docx",
+      "date_created": "2011-05-23T00:00:00.000Z",
+      "date_last_modified": "2023-06-02T00:00:00.000Z",
+      "draft_status": "Archive",
+      "ministries": [
+        {
+          "ministry_name": "Ministry of Technology, Innovation and Citizens’ Services"
+        },
+        {
+          "ministry_name": "Ministry of Children and Family Development"
+        },
+        {
+          "ministry_name": "Ministry of Social Development and Social Innovation"
+        }
+      ],
+      "division": "Employment and Labour Market Services Division",
+      "authors": [
+        {
+          "first_name": "Sweta",
+          "last_name": "Nandagiri"
+        },
+        {
+          "first_name": "Pasupathy",
+          "last_name": "Naresh Trilok"
+        },
+        {
+          "first_name": "Chieh",
+          "last_name": "Min"
+        },
+        {
+          "first_name": "Zameer",
+          "last_name": "Nisar"
+        },
+        {
+          "first_name": "Kahlil",
+          "last_name": "Amlani"
+        },
+        {
+          "first_name": "Ada",
+          "last_name": "Tsai"
+        },
+        {
+          "first_name": "Asad",
+          "last_name": "Khawaja"
+        },
+        {
+          "first_name": "Alan",
+          "last_name": "Thonas Oommen"
+        }
+      ],
+      "document_owner": 
+        {
+          "first_name": "Adam",
+          "last_name": "Spain",
+          "title": "Functional Lead"
+        },
+      "reviewers": [
+        {
+          "first_name": "Yvonne",
+          "last_name": "Muraro",
+          "title": "Business Lead",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Rob",
+          "last_name": "Byers",
+          "title": "Director",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Alison",
+          "last_name": "Bath",
+          "title": "Director",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Sarah",
+          "last_name": "Smith",
+          "title": "Change and Training Lead",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Mary",
+          "last_name": "Laboucane",
+          "title": "Manager",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Linda",
+          "last_name": "Turner",
+          "title": "Legacy Lead",
+          "ministry": ""
+        },
+        {
+          "first_name": "Arif",
+          "last_name": "Lalani",
+          "title": "Executive Director, Provincial Services",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Marcin",
+          "last_name": "Zaranski",
+          "title": "Executive Director",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Sue",
+          "last_name": "Wilson",
+          "title": "Project Manager",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Sheila",
+          "last_name": "Robinson",
+          "title": "Senior Executive Director of Practice",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Donna",
+          "last_name": "Mathiason",
+          "title": "Director",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Anne",
+          "last_name": "Minnings",
+          "title": "Chief Financial Officer",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Martin",
+          "last_name": "Wright",
+          "title": "Chief Information Officer and Executive Director",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Laura",
+          "last_name": "Nackman",
+          "title": "Business Lead",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        }
+      ],
+      "deliverable_approvers": [
+        {
+          "first_name": "Jill",
+          "last_name": "Kot",
+          "title": "ICM Executive Lead, Province",
+          "ministry": ""
+        },
+        {
+          "first_name": "Marcin",
+          "last_name": "Zaranski",
+          "title": "Executive Director",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Debi",
+          "last_name": "Upton",
+          "title": "Executive Director",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Beverly",
+          "last_name": "Dicks",
+          "title": "Assistant Deputy Minister",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Dexter",
+          "last_name": "Ratcliff",
+          "title": "Executive Director",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        }
+      ],
+      "overview": "This appendix outlines the functional specifications for the activity plan templates associated with Cases, Incidents and Service Requests within Phase 3 scope. It also references workflows that may be required to support the activity plan templates.",
+      "link": "https://bcgov.sharepoint.com/sites/SDPR-ISD-CS/Shared%20Documents/4.%20Operations/FDD/Release%204.16/ICM/Application/Activity%20Plans/Archive/2022_08_10_SD-002-01_FDD_App_M1.11_Activity_Plans_4.14_00_FINAL_CFD.docx",
+      "body": "blah blah blah to be added later"
+    },
+    {
+      "id": "5",
+      "filename": "2022_06_16_SD-002-01_FDD_App_M1.11_Activity_Plans_4.12_FINAL_ELMSD.docx",
+      "original_source_path": "https://bcgov.sharepoint.com/sites/SDPR-ISD-CS/Shared%20Documents/4.%20Operations/FDD/Release%204.16/ICM/Application/Activity%20Plans/Archive/2022_06_16_SD-002-01_FDD_App_M1.11_Activity_Plans_4.12_FINAL_ELMSD.docx",
+      "date_created": "2011-05-23T00:00:00.000Z",
+      "date_last_modified": "2011-05-23T00:00:00.000Z",
+      "draft_status": "Archive",
+      "ministries": [
+        {
+          "ministry_name": "Ministry of Technology, Innovation and Citizens’ Services"
+        },
+        {
+          "ministry_name": "Ministry of Children and Family Development"
+        },
+        {
+          "ministry_name": "Ministry of Social Development and Social Innovation"
+        }
+      ],
+      "division": "Employment and Labour Market Services Division",
+      "authors": [
+        {
+          "first_name": "Sweta",
+          "last_name": "Nandagiri"
+        },
+        {
+          "first_name": "Pasupathy",
+          "last_name": "Naresh Trilok"
+        },
+        {
+          "first_name": "Chieh",
+          "last_name": "Min"
+        },
+        {
+          "first_name": "Zameer",
+          "last_name": "Nisar"
+        },
+        {
+          "first_name": "Kahlil",
+          "last_name": "Amlani"
+        },
+        {
+          "first_name": "Ada",
+          "last_name": "Tsai"
+        },
+        {
+          "first_name": "Asad",
+          "last_name": "Khawaja"
+        },
+        {
+          "first_name": "Alan",
+          "last_name": "Thonas Oommen"
+        }
+      ],
+      "document_owner": 
+        {
+          "first_name": "Adam",
+          "last_name": "Spain",
+          "title": "Functional Lead"
+        },
+      "reviewers": [
+        {
+          "first_name": "Yvonne",
+          "last_name": "Muraro",
+          "title": "Business Lead",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Rob",
+          "last_name": "Byers",
+          "title": "Director",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Alison",
+          "last_name": "Bath",
+          "title": "Director",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Sarah",
+          "last_name": "Smith",
+          "title": "Change and Training Lead",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Mary",
+          "last_name": "Laboucane",
+          "title": "Manager",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Linda",
+          "last_name": "Turner",
+          "title": "Legacy Lead",
+          "ministry": ""
+        },
+        {
+          "first_name": "Arif",
+          "last_name": "Lalani",
+          "title": "Executive Director, Provincial Services",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Marcin",
+          "last_name": "Zaranski",
+          "title": "Executive Director",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Sue",
+          "last_name": "Wilson",
+          "title": "Project Manager",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Sheila",
+          "last_name": "Robinson",
+          "title": "Senior Executive Director of Practice",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Donna",
+          "last_name": "Mathiason",
+          "title": "Director",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Anne",
+          "last_name": "Minnings",
+          "title": "Chief Financial Officer",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Martin",
+          "last_name": "Wright",
+          "title": "Chief Information Officer and Executive Director",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Laura",
+          "last_name": "Nackman",
+          "title": "Business Lead",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        }
+      ],
+      "deliverable_approvers": [
+        {
+          "first_name": "Jill",
+          "last_name": "Kot",
+          "title": "ICM Executive Lead, Province",
+          "ministry": ""
+        },
+        {
+          "first_name": "Marcin",
+          "last_name": "Zaranski",
+          "title": "Executive Director",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Debi",
+          "last_name": "Upton",
+          "title": "Executive Director",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        },
+        {
+          "first_name": "Beverly",
+          "last_name": "Dicks",
+          "title": "Assistant Deputy Minister",
+          "ministry": "Ministry of Children and Family Development"
+        },
+        {
+          "first_name": "Dexter",
+          "last_name": "Ratcliff",
+          "title": "Executive Director",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        }
+      ],
+      "overview": "This appendix outlines the functional specifications for the activity plan templates associated with Cases, Incidents and Service Requests within Phase 3 scope. It also references workflows that may be required to support the activity plan templates.",
+      "link": "https://bcgov.sharepoint.com/sites/SDPR-ISD-CS/Shared%20Documents/4.%20Operations/FDD/Release%204.16/ICM/Application/Activity%20Plans/Archive/2022_06_16_SD-002-01_FDD_App_M1.11_Activity_Plans_4.12_FINAL_ELMSD.docx",
+      "body": "blah blah blah to be added later"
+    },
+    {
+      "id": "6",
+      "filename": "2021_03_07_SD-000-01_FDD_App_M1.11_Activity_Plans_4.8_00_DRAFT_RSD.docx",
+      "original_source_path": "https://bcgov.sharepoint.com/sites/SDPR-ISD-CS/Shared%20Documents/4.%20Operations/FDD/Release%204.16/ICM/Application/Activity%20Plans/Archive/2021_03_07_SD-000-01_FDD_App_M1.11_Activity_Plans_4.8_00_DRAFT_RSD.docx",
+      "date_created": "2011-05-23T00:00:00.000Z",
+      "date_last_modified": "2019-11-30T00:00:00.000Z",
+      "draft_status": "Archive",
+      "ministries": [
+        {
+          "ministry_name": "Ministry of Technology, Innovation and Citizens’ Services"
+        },
+        {
+          "ministry_name": "Ministry of Children and Family Development"
+        },
+        {
+          "ministry_name": "Ministry of Social Development and Social Innovation"
+        }
+      ],
+      "division": "Employment and Labour Market Services Division",
+      "authors": [
+        {
+          "first_name": "Sweta",
+          "last_name": "Nandagiri"
+        },
+        {
+          "first_name": "Pasupathy",
+          "last_name": "Naresh Trilok"
+        },
+        {
+          "first_name": "Chieh",
+          "last_name": "Min"
+        },
+        {
+          "first_name": "Zameer",
+          "last_name": "Nisar"
+        },
+        {
+          "first_name": "Kahlil",
+          "last_name": "Amlani"
+        },
+        {
+          "first_name": "Ada",
+          "last_name": "Tsai"
+        },
+        {
+          "first_name": "Asad",
+          "last_name": "Khawaja"
+        },
+        {
+          "first_name": "Alan",
+          "last_name": "Thonas Oommen"
+        },
+        {
+          "first_name": "Cameron",
+          "last_name": "Reid"
+        },
+        {
+          "first_name": "Jonathan",
+          "last_name": "Savidant"
+        }
+      ],
+      "document_owner": 
+        {
+          "first_name": "Shauna",
+          "last_name": "Elliott",
+          "title": "Functional Lead"
+        },
+      "reviewers": [
+        {
+          "first_name": "Linda",
+          "last_name": "Turner",
+          "title": "Project Lead",
+          "ministry": ""
+        }
+      ],
+      "deliverable_approvers": [
+        {
+          "first_name": "Rob",
+          "last_name": "Byers",
+          "title": "Executive Director",
+          "ministry": "Ministry of Social Development and Social Innovation"
+        }
+      ],
+      "overview": "This appendix outlines the functional specifications for the activity plan templates associated with Cases, Incidents and Service Requests within Phase 3 scope. It also references workflows that may be required to support the activity plan templates.",
+      "link": "https://bcgov.sharepoint.com/sites/SDPR-ISD-CS/Shared%20Documents/4.%20Operations/FDD/Release%204.16/ICM/Application/Activity%20Plans/Archive/2021_03_07_SD-000-01_FDD_App_M1.11_Activity_Plans_4.8_00_DRAFT_RSD.docx",
+      "body": "blah blah blah to be added later"
+    },
+    {
+      "id": "7",
+      "filename": "2019_12_02_SB_001-01_TDD_App_M1.11_Activities_4.6_TDD_FINAL.docx",
+      "original_source_path": "https://bcgov.sharepoint.com/sites/SDPR-ISD-CS/Shared%20Documents/4.%20Operations/TDD/01%20Application/Activities/2019_12_02_SB_001-01_TDD_App_M1.11_Activities_4.6_TDD_FINAL.docx",
+      "date_created": "2011-06-16T00:00:00.000Z",
+      "date_last_modified": "2019-10-22T00:00:00.000Z",
+      "draft_status": "Archive",
+      "ministries": [
+        {
+          "ministry_name": "Ministry of Technology, Innovation and Citizens’ Services"
+        },
+        {
+          "ministry_name": "Ministry of Children and Family Development"
+        },
+        {
+          "ministry_name": "Ministry of Social Development and Social Innovation"
+        }
+      ],
+      "division": "Employment and Labour Market Services Division",
+      "authors": [
+        {
+          "first_name": "Harold",
+          "last_name": "Benson"
+        }
+      ],
+      "document_owner": 
+        {
+          "first_name": "Shauna",
+          "last_name": "Elliott",
+          "title": "Functional Lead"
+        },
+      "reviewers": [],
+      "deliverable_approvers": [],
+      "overview": "This document outlines the technical details of configuration changes to Siebel objects for the Activities Module to function as document in the FDD. It presents the Business Requirement mapping at a detailed technical level on an object by object basis.",
+      "link": "https://bcgov.sharepoint.com/sites/SDPR-ISD-CS/Shared%20Documents/4.%20Operations/TDD/01%20Application/Activities/2019_12_02_SB_001-01_TDD_App_M1.11_Activities_4.6_TDD_FINAL.docx",
+      "body": "blah blah blah to be added later"
+    },
+    {
+      "id": "8",
+      "filename": "2019_12_02_MS-016-01_TDD_App_M1.12_Activity_Plans_4.6_00_FINAL_SDSI.docx",
+      "original_source_path": "https://bcgov.sharepoint.com/sites/SDPR-ISD-CS/Shared%20Documents/4.%20Operations/TDD/01%20Application/Activity%20Plans/2019_12_02_MS-016-01_TDD_App_M1.12_Activity_Plans_4.6_00_FINAL_SDSI.docx",
+      "date_created": "2011-07-11T00:00:00.000Z",
+      "date_last_modified": "2019-10-20T00:00:00.000Z",
+      "draft_status": "Archive",
+      "ministries": [
+        {
+          "ministry_name": "Ministry of Children and Family Development"
+        },
+        {
+          "ministry_name": "Ministry of Social Development and Social Innovation"
+        }
+      ],
+      "division": "Employment and Labour Market Services Division",
+      "authors": [
+        {
+          "first_name": "Rajendra",
+          "last_name": "Panda"
+        }
+      ],
+      "document_owner": 
+        {
+          "first_name": "Shauna",
+          "last_name": "Elliott",
+          "title": "Technical Lead"
+        },
+      "reviewers": [],
+      "deliverable_approvers": [],
+      "overview": "This document outlines the technical details of configuration changes to Siebel objects for the Activity Plans module to function as documented FDD. It presents the Business Requirement mapping at a detailed technical level on an object by object basis.",
+      "link": "https://bcgov.sharepoint.com/sites/SDPR-ISD-CS/Shared%20Documents/4.%20Operations/TDD/01%20Application/Activity%20Plans/2019_12_02_MS-016-01_TDD_App_M1.12_Activity_Plans_4.6_00_FINAL_SDSI.docx",
+      "body": "blah blah blah to be added later"
+    },
+    {
+      "id": "9",
+      "filename": "2019_12_02_MS-016-01_TDD_App_M1.12_Activity_Plans_4.6_00_FINAL_ELMSD.docx",
+      "original_source_path": "https://bcgov.sharepoint.com/sites/SDPR-ISD-CS/Shared%20Documents/4.%20Operations/TDD/01%20Application/Activity%20Plans/2019_12_02_MS-016-01_TDD_App_M1.12_Activity_Plans_4.6_00_FINAL_ELMSD.docx",
+      "date_created": "2011-07-11T00:00:00.000Z",
+      "date_last_modified": "2019-12-21T00:00:00.000Z",
+      "draft_status": "Final",
+      "ministries": [
+        {
+          "ministry_name": "Ministry of Children and Family Development"
+        },
+        {
+          "ministry_name": "Ministry of Social Development and Social Innovation"
+        }
+      ],
+      "division": "Employment and Labour Market Services Division",
+      "authors": [
+        {
+          "first_name": "Rajendra",
+          "last_name": "Panda"
+        }
+      ],
+      "document_owner": 
+        {
+          "first_name": "Shauna",
+          "last_name": "Elliott",
+          "title": "Technical Lead"
+        },
+      "reviewers": [],
+      "deliverable_approvers": [],
+      "overview": "This document outlines the technical details of configuration changes to Siebel objects for the Activity Plans module to function as documented FDD. It presents the Business Requirement mapping at a detailed technical level on an object by object basis..",
+      "link": "https://bcgov.sharepoint.com/sites/SDPR-ISD-CS/Shared%20Documents/4.%20Operations/TDD/01%20Application/Activity%20Plans/2019_12_02_MS-016-01_TDD_App_M1.12_Activity_Plans_4.6_00_FINAL_ELMSD.docx",
+      "body": "blah blah blah to be added later"
+    },
+    {
+      "id": "10",
+      "filename": "2019_12_02_MS-016-01_TDD_App_M1.12_Activity_Plans_4.6_00_FINAL_CFD.docx",
+      "original_source_path": "https://bcgov.sharepoint.com/sites/SDPR-ISD-CS/Shared%20Documents/4.%20Operations/TDD/01%20Application/Activity%20Plans/2019_12_02_MS-016-01_TDD_App_M1.12_Activity_Plans_4.6_00_FINAL_CFD.docx",
+      "date_created": "2011-07-11T00:00:00.000Z",
+      "date_last_modified": "2019-12-02T00:00:00.000Z",
+      "draft_status": "Archive",
+      "ministries": [
+        {
+          "ministry_name": "Ministry of Children and Family Development"
+        },
+        {
+          "ministry_name": "Ministry of Social Development and Social Innovation"
+        }
+      ],
+      "division": "Employment and Labour Market Services Division",
+      "authors": [
+        {
+          "first_name": "Rajendra",
+          "last_name": "Panda"
+        }
+      ],
+      "document_owner": 
+        {
+          "first_name": "Shauna",
+          "last_name": "Elliott",
+          "title": "Technical Lead"
+        },
+      "reviewers": [],
+      "deliverable_approvers": [],
+      "overview": "This document outlines the technical details of configuration changes to Siebel objects for the Activity Plans module to function as documented FDD. It presents the Business Requirement mapping at a detailed technical level on an object by object basis.",
+      "link": "https://bcgov.sharepoint.com/sites/SDPR-ISD-CS/Shared%20Documents/4.%20Operations/TDD/01%20Application/Activity%20Plans/2019_12_02_MS-016-01_TDD_App_M1.12_Activity_Plans_4.6_00_FINAL_CFD.docx",
+      "body": "blah blah blah to be added later"
+    }
+  ]
