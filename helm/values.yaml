@@ -3,7 +3,7 @@ replicaCount: 1
 
 image:
   repository: ghcr.io/joshualarouche/document-search-poc
-  tag: latest
+  tag: main
   pullPolicy: Always
 
 service:
