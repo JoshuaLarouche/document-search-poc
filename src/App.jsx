@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { InstantSearch, InfiniteHits, SearchBox, Stats, Highlight } from "react-instantsearch-dom";
+import { instantMeiliSearch } from "@meilisearch/instant-meilisearch";
+import "instantsearch.css/themes/algolia-min.css";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+const searchClient = instantMeiliSearch(
+  "http://localhost:7700",
+  "rO5_rXjNcNjcO4nXZRKBwFFjhNpAxAym65SFtetSTV0"
+);
+
+const App = () => (
+  <div className="ais-InstantSearch">
+    <h1>Document Search Proof of Concept</h1>
+    <InstantSearch indexName="files" searchClient={searchClient}>
+      <Stats />
+      <SearchBox />
+      <InfiniteHits hitComponent={Hit} />
+    </InstantSearch>
+  </div>
+);
+
+const Hit = ({ hit }) => {
+  const authorsHighlighted = hit._highlightResult.authors.map((author, index) => (
+    <span key={index}>
+      <Highlight attribute={`authors[${index}].first_name`} hit={hit} tagName="mark" />{" "}
+      <Highlight attribute={`authors[${index}].last_name`} hit={hit} tagName="mark" />
+      {index < hit.authors.length - 1 ? ", " : ""}
+    </span>
+  ));
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="hit" key={hit.id}>
+      <div className="hit-filename">
+        <Highlight attribute="filename" hit={hit} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <p className="hit-authors">{authorsHighlighted}</p>
+      <div className="hit-overview">
+        <Highlight attribute="overview" hit={hit} />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default App
+export default App;

@@ -40,3 +40,42 @@
 .read-the-docs {
   color: #888;
 }
+
+.hit {
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  max-width: 400px; /* Adjust as needed */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.hit-filename {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.hit-authors {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 8px;
+  white-space: normal;
+}
+
+.hit-overview {
+  font-size: 0.9em;
+  color: #777;
+}
+
+mark {
+  background-color: yellow; /* Adjust as needed */
+  font-weight: bold;
+}
