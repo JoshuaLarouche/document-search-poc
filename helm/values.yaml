@@ -2,7 +2,7 @@
 replicaCount: 1
 
 image:
-  repository: ghcr.io/JoshuaLarouche/document-search-poc
+  repository: ghcr.io/joshualarouche/document-search-poc
   tag: latest
   pullPolicy: Always
 
