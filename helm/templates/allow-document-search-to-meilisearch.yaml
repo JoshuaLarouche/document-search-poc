@@ -17,4 +17,4 @@ spec:
           app.kubernetes.io/name: document-search-poc
     ports:
     - protocol: TCP
-      port: 8080
+      port: 
