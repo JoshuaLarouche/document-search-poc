@@ -4,6 +4,7 @@ import { instantMeiliSearch } from "@meilisearch/instant-meilisearch";
 import "instantsearch.css/themes/algolia-min.css";
 import "./App.css";
 
+//TODO protect key in secret 
 const searchClient = instantMeiliSearch(
   "http://localhost:7700",
   "rO5_rXjNcNjcO4nXZRKBwFFjhNpAxAym65SFtetSTV0"

@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-document-search-to-meilisearch
+  namespace: aebbdd-test
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/instance: doc-search
+      app.kubernetes.io/name: meilisearch
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app.kubernetes.io/name: document-search-poc
+    ports:
+    - protocol: TCP
+      port: 8080
