@@ -7,7 +7,7 @@ import "./App.css";
 //TODO protect key in secret 
 const searchClient = instantMeiliSearch(
   "https://test.doc.search.apps.silver.devops.gov.bc.ca",
-  "9m92OODAPKinNW7uXKyUy5iLpUhlUUzMbqyGUK827pY"
+  "M01OpyNyPSDikZ9o-A7ZqKEbbl4QgrwiipMVW--6Y1Q"
 );
 
 const App = () => (
