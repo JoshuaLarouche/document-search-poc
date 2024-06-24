@@ -13,7 +13,7 @@ const searchClient = instantMeiliSearch(
 const App = () => (
   <div className="ais-InstantSearch">
     <h1>Document Search Proof of Concept</h1>
-    <InstantSearch indexName="files" searchClient={searchClient}>
+    <InstantSearch indexName="test" searchClient={searchClient}>
       <Stats />
       <SearchBox />
       <InfiniteHits hitComponent={Hit} />
