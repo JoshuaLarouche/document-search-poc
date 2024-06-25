@@ -1,5 +1,5 @@
 import React from "react";
-import { InstantSearch, InfiniteHits, SearchBox, Stats, Highlight, Snippet } from "react-instantsearch-dom";
+import { InstantSearch, InfiniteHits, SearchBox, Stats, Highlight, Snippet, Configure } from "react-instantsearch-dom";
 import { instantMeiliSearch } from "@meilisearch/instant-meilisearch";
 import "instantsearch.css/themes/algolia-min.css";
 import "./App.css";
@@ -16,6 +16,7 @@ const App = () => (
     <InstantSearch indexName="test" searchClient={searchClient}>
       <Stats />
       <SearchBox />
+      <Configure attributesToSnippet={["X-TIKA:content:500"]} />
       <InfiniteHits hitComponent={Hit} />
     </InstantSearch>
   </div>
