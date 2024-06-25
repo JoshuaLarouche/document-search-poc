@@ -1,5 +1,5 @@
 import React from "react";
-import { InstantSearch, InfiniteHits, SearchBox, Stats, Highlight } from "react-instantsearch-dom";
+import { InstantSearch, InfiniteHits, SearchBox, Stats, Highlight, Snippet } from "react-instantsearch-dom";
 import { instantMeiliSearch } from "@meilisearch/instant-meilisearch";
 import "instantsearch.css/themes/algolia-min.css";
 import "./App.css";
@@ -49,7 +49,7 @@ const Hit = ({ hit }) => {
         <Highlight attribute="extended-properties:Company" hit={hit} />
       </div>
       <div className="hit-content">
-        <Highlight attribute="X-TIKA:content" hit={hit} />
+        <Snippet attribute="X-TIKA:content" hit={hit} tagName="mark" />
       </div>
     </div>
   );
