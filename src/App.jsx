@@ -16,7 +16,7 @@ const App = () => (
     <InstantSearch indexName="test" searchClient={searchClient}>
       <Stats />
       <SearchBox />
-      <Configure attributesToSnippet={["X-TIKA:content:500"]} />
+      <Configure attributesToSnippet={["X-TIKA:content:100"]} />
       <InfiniteHits hitComponent={Hit} />
     </InstantSearch>
   </div>
