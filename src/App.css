@@ -54,25 +54,11 @@
   flex-direction: column;
 }
 
-.hit-filename {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 8px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
-}
-
-.hit-authors {
+.hit-title, .hit-last-author, .hit-creator, .hit-publisher, .hit-company, .hit-content {
   font-size: 1em;
   color: #555;
   margin-bottom: 8px;
   white-space: normal;
-}
-
-.hit-overview {
-  font-size: 0.9em;
-  color: #777;
 }
 
 mark {
