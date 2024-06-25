@@ -22,21 +22,15 @@ const App = () => (
 );
 
 const Hit = ({ hit }) => {
-//   const authorsHighlighted = hit._highlightResult.authors.map((author, index) => (
-//     <span key={index}>
-//       <Highlight attribute={`authors[${index}].first_name`} hit={hit} tagName="mark" />{" "}
-//       <Highlight attribute={`authors[${index}].last_name`} hit={hit} tagName="mark" />
-//       {index < hit.authors.length - 1 ? ", " : ""}
-//     </span>
-//   ));
-
-  
   return (
     <div className="hit" key={hit.id}>
       <div className="hit-title">
-        <Highlight attribute="dc:title" hit={hit} />
+        <Highlight attribute="title" hit={hit} />
       </div>
-      <div className="hit-creator">
+      <div className="hit-filename">
+        <Highlight attribute="filename" hit={hit} />
+      </div>
+      <div className="hit-last-author">
         <Highlight attribute="meta:last-author" hit={hit} />
       </div>
       <div className="hit-creator">

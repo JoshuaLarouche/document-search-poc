@@ -54,7 +54,7 @@
   flex-direction: column;
 }
 
-.hit-title, .hit-last-author, .hit-creator, .hit-publisher, .hit-company, .hit-content {
+.hit-title, .hit-filename, .hit-last-author, .hit-creator, .hit-publisher, .hit-company, .hit-content {
   font-size: 1em;
   color: #555;
   margin-bottom: 8px;
