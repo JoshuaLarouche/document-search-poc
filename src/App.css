@@ -48,7 +48,7 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  max-width: 400px; /* Adjust as needed */
+  max-width: 800px; /* Adjust as needed */
   overflow: hidden;
   display: flex;
   flex-direction: column;
