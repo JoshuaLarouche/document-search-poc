@@ -73,10 +73,10 @@ const Hit = ({ hit }) => (
       <strong>Company:</strong> <Highlight attribute="extended-properties:Company" hit={hit} />
     </div>
     <div className="hit-field">
-      <strong>Created:</strong> {hit["dcterms:created"]} {/* Display created date */}
+      <strong>Date Created:</strong> {hit["dcterms:created"]} {/* Display created date */}
     </div>
     <div className="hit-field">
-      <strong>Modified:</strong> {hit["dcterms:modified"]} {/* Display modified date */}
+      <strong>Date Last Modified:</strong> {hit["dcterms:modified"]} {/* Display modified date */}
     </div>
     <div className="hit-field">
       <strong>Content:</strong> <Snippet attribute="X-TIKA:content" hit={hit} tagName="mark" />
