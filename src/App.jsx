@@ -1,5 +1,5 @@
 import React from "react";
-import { InstantSearch, InfiniteHits, SearchBox, Stats, Highlight, Snippet, Configure } from "react-instantsearch-dom";
+import { InstantSearch, InfiniteHits, SearchBox, Stats, Highlight, Snippet, Configure, RefinementList } from "react-instantsearch-dom";
 import { instantMeiliSearch } from "@meilisearch/instant-meilisearch";
 import "instantsearch.css/themes/algolia-min.css";
 import "./App.css";
@@ -16,8 +16,14 @@ const App = () => (
     <InstantSearch indexName="test" searchClient={searchClient}>
       <Stats />
       <SearchBox />
-      <Configure attributesToSnippet={["X-TIKA:content:100"]} />
-      <InfiniteHits hitComponent={Hit} />
+      <div className="left-panel">
+        <h2>Filter by Content Type</h2>
+        <RefinementList attribute="Content-Type" />
+      </div>
+      <div className="right-panel">
+        <Configure attributesToSnippet={["X-TIKA:content:50"]} />
+        <InfiniteHits hitComponent={Hit} />
+      </div>
     </InstantSearch>
   </div>
 );
