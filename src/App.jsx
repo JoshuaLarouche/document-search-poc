@@ -58,10 +58,7 @@ const App = () => (
 const Hit = ({ hit }) => (
   <div className="hit" key={hit.id}>
     <div className="hit-field">
-      <strong>Title:</strong> <Highlight attribute="title" hit={hit} />
-    </div>
-    <div className="hit-field">
-      <strong>Filename:</strong> <Highlight attribute="filename" hit={hit} />
+      <strong>Title:</strong> <Highlight attribute="dc:title" hit={hit} />
     </div>
     <div className="hit-field">
       <strong>Last Author:</strong> <Highlight attribute="meta:last-author" hit={hit} />
@@ -74,6 +71,12 @@ const Hit = ({ hit }) => (
     </div>
     <div className="hit-field">
       <strong>Company:</strong> <Highlight attribute="extended-properties:Company" hit={hit} />
+    </div>
+    <div className="hit-field">
+      <strong>Created:</strong> {hit["dcterms:created"]} {/* Display created date */}
+    </div>
+    <div className="hit-field">
+      <strong>Modified:</strong> {hit["dcterms:modified"]} {/* Display modified date */}
     </div>
     <div className="hit-field">
       <strong>Content:</strong> <Snippet attribute="X-TIKA:content" hit={hit} tagName="mark" />
