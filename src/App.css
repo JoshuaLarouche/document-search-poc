@@ -18,17 +18,22 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  max-width: 800px; /* Adjust as needed */
+  max-width: 400px; /* Adjust as needed */
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
-.hit-title, .hit-filename, .hit-last-author, .hit-creator, .hit-publisher, .hit-company, .hit-content {
+.hit-field {
   font-size: 1em;
   color: #555;
   margin-bottom: 8px;
   white-space: normal;
+}
+
+.hit-field strong {
+  font-weight: bold;
+  color: #333;
 }
 
 mark {

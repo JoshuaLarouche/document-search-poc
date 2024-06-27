@@ -4,7 +4,7 @@ import { instantMeiliSearch } from "@meilisearch/instant-meilisearch";
 import "instantsearch.css/themes/algolia-min.css";
 import "./App.css";
 
-//TODO protect key in secret 
+// TODO: Protect key in secret 
 const searchClient = instantMeiliSearch(
   "https://test.doc.search.apps.silver.devops.gov.bc.ca",
   "M01OpyNyPSDikZ9o-A7ZqKEbbl4QgrwiipMVW--6Y1Q"
@@ -31,26 +31,26 @@ const App = () => (
 const Hit = ({ hit }) => {
   return (
     <div className="hit" key={hit.id}>
-      <div className="hit-title">
-        <Highlight attribute="title" hit={hit} />
+      <div className="hit-field">
+        <strong>Title:</strong> <Highlight attribute="title" hit={hit} />
       </div>
-      <div className="hit-filename">
-        <Highlight attribute="filename" hit={hit} />
+      <div className="hit-field">
+        <strong>Filename:</strong> <Highlight attribute="filename" hit={hit} />
       </div>
-      <div className="hit-last-author">
-        <Highlight attribute="meta:last-author" hit={hit} />
+      <div className="hit-field">
+        <strong>Last Author:</strong> <Highlight attribute="meta:last-author" hit={hit} />
       </div>
-      <div className="hit-creator">
-        <Highlight attribute="dc:creator" hit={hit} />
+      <div className="hit-field">
+        <strong>Creator:</strong> <Highlight attribute="dc:creator" hit={hit} />
       </div>
-      <div className="hit-publisher">
-        <Highlight attribute="dc:publisher" hit={hit} />
+      <div className="hit-field">
+        <strong>Publisher:</strong> <Highlight attribute="dc:publisher" hit={hit} />
       </div>
-      <div className="hit-company">
-        <Highlight attribute="extended-properties:Company" hit={hit} />
+      <div className="hit-field">
+        <strong>Company:</strong> <Highlight attribute="extended-properties:Company" hit={hit} />
       </div>
-      <div className="hit-content">
-        <Snippet attribute="X-TIKA:content" hit={hit} tagName="mark" />
+      <div className="hit-field">
+        <strong>Content:</strong> <Snippet attribute="X-TIKA:content" hit={hit} tagName="mark" />
       </div>
     </div>
   );
