@@ -14,14 +14,14 @@ const App = () => (
   <div className="ais-InstantSearch">
     <h1>Document Search Proof of Concept</h1>
     <InstantSearch indexName="test" searchClient={searchClient}>
-      <Stats />
-      <SearchBox />
       <div className="left-panel">
         <h2>Filter by Content Type</h2>
         <RefinementList attribute="Content-Type" />
       </div>
       <div className="right-panel">
-        <Configure attributesToSnippet={["X-TIKA:content:50"]} />
+        <Stats />
+        <SearchBox />
+        <Configure attributesToSnippet={["X-TIKA:content:100"]} />
         <InfiniteHits hitComponent={Hit} />
       </div>
     </InstantSearch>
