@@ -1,52 +1,91 @@
-.ais-InstantSearch {
-  display: flex;
-  flex-direction: column; /* Make the main container a column layout */
-  align-items: center; /* Center the content horizontally */
-}
-
-.left-panel, .right-panel {
-  width: 80%; /* Adjust the width as needed */
+h1 {
+  background-color: navy;
+  color: white;
+  padding: 20px 10px;
+  margin: 0;
+  text-align: left; /* Align text to the left */
+  width: 100%;
+  box-sizing: border-box;
   margin-bottom: 20px;
+  display: flex; /* Make h1 a flex container */
+  align-items: center; /* Center items vertically */
+  justify-content: flex-start; /* Align items to the start (left) */
+  border-bottom: 2px solid orange; /* Add orange bottom border */
 }
 
-.left-panel {
+.header-logo {
+  width: 200px; /* Increase width as needed */
+  height: auto;
+  margin-right: 20px; /* Space between the logo and text */
+}
+
+/* Style for search bar */
+.search-bar {
+  margin-bottom: 5px; /* Reduce margin between search bar and filter */
+}
+
+.delineating-line {
+  border: 0;
+  height: 1px;
+  background: orange; /* Change to orange */
+  margin: 20px 0; /* Space around the line */
+}
+
+/* Style for filter section */
+.filter-section {
+  margin-top: 5px; /* Add margin at the top to separate from search bar */
+}
+
+.filter-options {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  height: auto; /* Ensure the height adjusts to the content */
+}
+
+.filter-options h2 {
+  font-size: 1rem; /* Adjust font size of h2 text */
+  margin-right: 10px; /* Space between the title and the filters */
+}
+
+.ais-RefinementList {
+  display: flex;
   align-items: center;
 }
 
-.right-panel {
+.ais-RefinementList-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Display filter items horizontally */
+  align-items: center;
+  flex-wrap: wrap; /* Wrap filter items to next line if needed */
+  gap: 15px; /* Space between filter items */
+  padding-left: 0; /* Remove default padding */
+}
+
+.ais-RefinementList-item {
+  display: flex;
   align-items: center;
 }
 
-.hit {
+.ais-Highlight-highlighted, .ais-Snippet-highlighted,
+.highlight {
+  background-color: yellow; /* Change to vibrant yellow */
+  color: black; /* Adjust text color for better readability */
+}
+
+/* Other custom styles */
+.ais-Hits {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.ais-Hits .hit {
+  flex: 1 0 45%; /* Adjust the width as needed */
+  margin: 10px;
+  padding: 10px;
   border: 1px solid #ddd;
-  padding: 16px;
-  margin: 16px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  max-width: 800px; /* Adjust as needed */
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
 
-.hit-field {
-  font-size: 1em;
-  color: #555;
-  margin-bottom: 8px;
-  white-space: normal;
-}
-
-.hit-field strong {
-  font-weight: bold;
-  color: #333;
-}
-
-mark {
-  background-color: yellow; /* Adjust as needed */
-  font-weight: bold;
+.ais-SearchBox {
+  margin-bottom: 20px;
 }
