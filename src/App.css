@@ -1,22 +1,30 @@
-h1 {
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between logo/title and button */
   background-color: navy;
-  color: white;
-  padding: 20px 10px;
-  margin: 0;
-  text-align: left; /* Align text to the left */
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-  display: flex; /* Make h1 a flex container */
-  align-items: center; /* Center items vertically */
-  justify-content: flex-start; /* Align items to the start (left) */
-  border-bottom: 2px solid orange; /* Add orange bottom border */
+  color: white; /* Change the text color to ensure it is readable */
+  padding: 20px 10px; /* Add padding to the top and bottom for better spacing */
+  margin: 0; /* Remove any default margin */
+  width: 100%; /* Ensure the element takes up the full width */
+  box-sizing: border-box; /* Include padding in the element's width */
+  margin-bottom: 20px; /* Add margin at the bottom to separate from search bar */
+  border-bottom: 4px solid orange; /* Add orange bottom border */
 }
 
 .header-logo {
-  width: 200px; /* Increase width as needed */
-  height: auto;
-  margin-right: 20px; /* Space between the logo and text */
+  height: 80px;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+.upload-button {
+  padding: 5px 10px; /* Smaller padding for a smaller button */
+  background-color: orange; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
 }
 
 /* Style for search bar */

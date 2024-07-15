@@ -15,10 +15,10 @@ import "./App.css";
 import logo from './assets/BCID_H_rgb_pos.png';
 
 const searchClient = instantMeiliSearch(
-  "https://test.doc.search.apps.silver.devops.gov.bc.ca",
-  "M01OpyNyPSDikZ9o-A7ZqKEbbl4QgrwiipMVW--6Y1Q"
-  // "http://localhost:7700/",
-  // "AcP1KBq-S9mZbDizXcEQ87xvf5kT9FCRyk-k-iXgtkA"
+  // "https://test.doc.search.apps.silver.devops.gov.bc.ca",
+  // "M01OpyNyPSDikZ9o-A7ZqKEbbl4QgrwiipMVW--6Y1Q"
+  "http://localhost:7700/",
+  "AcP1KBq-S9mZbDizXcEQ87xvf5kT9FCRyk-k-iXgtkA"
 );
 
 const contentTypeMapping = {
@@ -31,10 +31,11 @@ const contentTypeMapping = {
 
 const App = () => (
   <div className="ais-InstantSearch">
-    <h1>
-      <img src={logo} alt="Logo" className="header-logo" /> {/* Add the logo image */}
-      Document Search Proof of Concept
-    </h1>
+    <div className="header">
+      <img src={logo} alt="Logo" className="header-logo" />
+      <h1>Document Search Proof of Concept</h1>
+      <button className="upload-button">Upload</button>
+    </div>
     <InstantSearch indexName="test" searchClient={searchClient}>
         <SearchBox />
         <hr className="delineating-line" />
