@@ -29,7 +29,8 @@ const UploadPage = () => {
       endpoint: 'https://tika-test.apps.silver.devops.gov.bc.ca/tika',
       fieldName: 'file', // This should match the field name in your form
       headers: {
-        'Accept': 'text/plain'
+        'Accept': 'text/plain',
+        'Access-Control-Allow-Origin': '*'
       }
     });
 
