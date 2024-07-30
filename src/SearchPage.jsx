@@ -17,8 +17,6 @@ import logo from './assets/BCID_H_rgb_pos.png';
 const searchClient = instantMeiliSearch(
   "https://test.doc.search.apps.silver.devops.gov.bc.ca",
   "M01OpyNyPSDikZ9o-A7ZqKEbbl4QgrwiipMVW--6Y1Q"
-  // "http://localhost:7700/",
-  // "AcP1KBq-S9mZbDizXcEQ87xvf5kT9FCRyk-k-iXgtkA"
 );
 
 const contentTypeMapping = {
