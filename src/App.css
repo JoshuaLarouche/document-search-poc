@@ -1,99 +1,32 @@
+/* Header styles for the app page */
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Space between logo/title and button */
   background-color: navy;
-  color: white; /* Change the text color to ensure it is readable */
-  padding: 20px 10px; /* Add padding to the top and bottom for better spacing */
-  margin: 0; /* Remove any default margin */
-  width: 100%; /* Ensure the element takes up the full width */
-  box-sizing: border-box; /* Include padding in the element's width */
-  margin-bottom: 20px; /* Add margin at the bottom to separate from search bar */
-  border-bottom: 4px solid orange; /* Add orange bottom border */
+  color: white;
+  padding: 20px 10px;
+  margin: 0;
+  text-align: left; /* Align text to the left */
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  display: flex; /* Make header a flex container */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between logo/title and button */
+  border-bottom: 2px solid orange; /* Orange bottom border */
+  position: relative; /* Ensure child absolute elements are positioned relative to this container */
 }
 
 .header-logo {
-  height: 80px;
-  margin-right: 20px;
-  vertical-align: middle;
+  width: 200px; /* Adjust width as needed */
+  height: auto;
+  margin-right: 20px; /* Space between the logo and text */
 }
 
 .upload-button {
-  padding: 5px 10px; /* Smaller padding for a smaller button */
+  padding: 10px 20px; /* Padding inside the button */
   background-color: orange; /* Button background color */
   color: white; /* Button text color */
   border: none; /* Remove default border */
   border-radius: 5px; /* Rounded corners */
   cursor: pointer; /* Pointer cursor on hover */
-}
-
-/* Style for search bar */
-.search-bar {
-  margin-bottom: 5px; /* Reduce margin between search bar and filter */
-}
-
-.delineating-line {
-  border: 0;
-  height: 1px;
-  background: orange; /* Change to orange */
-  margin: 20px 0; /* Space around the line */
-}
-
-/* Style for filter section */
-.filter-section {
-  margin-top: 5px; /* Add margin at the top to separate from search bar */
-}
-
-.filter-options {
-  display: flex;
-  align-items: center;
-  height: auto; /* Ensure the height adjusts to the content */
-}
-
-.filter-options h2 {
-  font-size: 1rem; /* Adjust font size of h2 text */
-  margin-right: 10px; /* Space between the title and the filters */
-}
-
-.ais-RefinementList {
-  display: flex;
-  align-items: center;
-}
-
-.ais-RefinementList-list {
-  display: flex;
-  flex-direction: row; /* Display filter items horizontally */
-  align-items: center;
-  flex-wrap: wrap; /* Wrap filter items to next line if needed */
-  gap: 15px; /* Space between filter items */
-  padding-left: 0; /* Remove default padding */
-}
-
-.ais-RefinementList-item {
-  display: flex;
-  align-items: center;
-}
-
-.ais-Highlight-highlighted, .ais-Snippet-highlighted,
-.highlight {
-  background-color: yellow; /* Change to vibrant yellow */
-  color: black; /* Adjust text color for better readability */
-}
-
-/* Other custom styles */
-.ais-Hits {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.ais-Hits .hit {
-  flex: 1 0 45%; /* Adjust the width as needed */
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ddd;
-}
-
-.ais-SearchBox {
-  margin-bottom: 20px;
+  margin-left: auto; /* Push button to the right */
 }
