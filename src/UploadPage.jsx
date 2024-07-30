@@ -26,7 +26,7 @@ const UploadPage = () => {
       height: 400
     }).use(XHRUpload, {
       method: 'PUT',
-      endpoint: 'http://unsecured.tika.apps.silver.devops.gov.bc.ca/tika',
+      endpoint: 'https://test.tika.apps.silver.devops.gov.bc.ca/tika',
       fieldName: 'file', // This should match the field name in your form
       headers: {
         'Accept': 'text/plain'
