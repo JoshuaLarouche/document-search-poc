@@ -92,7 +92,7 @@ const UploadPage = () => {
     uppyRef.current = uppy;
 
     return () => {
-      uppy.close();
+      uppy.close;
     };
   }, []);
 
