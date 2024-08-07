@@ -15,8 +15,10 @@ import "./SearchPage.css";
 import logo from './assets/BCID_H_rgb_pos.png';
 
 const searchClient = instantMeiliSearch(
-  "https://test.doc.search.apps.silver.devops.gov.bc.ca",
-  "M01OpyNyPSDikZ9o-A7ZqKEbbl4QgrwiipMVW--6Y1Q"
+  // "https://test.doc.search.apps.silver.devops.gov.bc.ca",
+  // "M01OpyNyPSDikZ9o-A7ZqKEbbl4QgrwiipMVW--6Y1Q"
+  "http://localhost:7700",
+  "ozREe6YsmS6j9UMiLVJX78bKqp0bkGAUe7P2eXzAoEM"
 );
 
 const contentTypeMapping = {
@@ -29,7 +31,7 @@ const contentTypeMapping = {
 
 const SearchPage = () => (
   <div className="ais-InstantSearch">
-    <InstantSearch indexName="test" searchClient={searchClient}>
+    <InstantSearch indexName="uppy" searchClient={searchClient}>
       <SearchBox />
       <hr className="delineating-line" />
       <div className="filter-options">
