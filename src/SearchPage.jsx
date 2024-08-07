@@ -15,7 +15,7 @@ import "./SearchPage.css";
 import logo from './assets/BCID_H_rgb_pos.png';
 
 const searchClient = instantMeiliSearch(
-  "https://test.doc.search.apps.silver.devops.gov.bc.ca",
+  "https://meilisearch-test.apps.silver.devops.gov.bc.ca",
   "NKeIxVU7wmZGWoCP2XOCbm53APgLfNxdn8BemhMVmDA"
   // "http://localhost:7700",
   // "ozREe6YsmS6j9UMiLVJX78bKqp0bkGAUe7P2eXzAoEM"
