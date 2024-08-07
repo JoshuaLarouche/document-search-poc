@@ -58,7 +58,8 @@ const UploadPage = () => {
         };
 
         // Send combined data to Meilisearch
-        await axios.post('http://localhost:7700/indexes/uppy/documents', combinedData);
+        // await axios.post('http://localhost:7700/indexes/uppy/documents', combinedData);
+        await axios.post('https://test.doc.search.apps.silver.devops.gov.bc.ca/indexes/uppy/documents', combinedData);
 
         console.log('Original response from Tika:', metadata);
         console.log('Cleaned content:', cleanedContent);
