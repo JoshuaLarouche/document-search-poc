@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Uppy from "@uppy/core";
 import Dashboard from "@uppy/dashboard";
 import XHRUpload from "@uppy/xhr-upload";
@@ -8,9 +8,11 @@ import "./UploadPage.css";
 import logo from './assets/BCID_H_rgb_pos.png';
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
+import { ClipLoader } from "react-spinners"; // Import the spinner component
 
 const UploadPage = () => {
   const uppyRef = useRef(null);
+  const [loading, setLoading] = useState(false); // State to manage loading
 
   useEffect(() => {
     const uppy = new Uppy({
@@ -26,6 +28,10 @@ const UploadPage = () => {
       height: 400
     });
 
+    uppy.on('upload', () => {
+      setLoading(true); // Show loading when upload starts
+    });
+
     uppy.on('complete', async (result) => {
       const file = result.successful[0].data;
       const fileType = file.type;
@@ -37,6 +43,10 @@ const UploadPage = () => {
           headers: {
             'Content-Type': fileType,
             'Accept': 'application/json',
+          },
+          onUploadProgress: progressEvent => {
+            const progress = (progressEvent.loaded / progressEvent.total) * 100;
+            console.log(`Meta upload progress: ${progress}%`);
           }
         });
         const metadata = metaResponse.data;
@@ -46,6 +56,10 @@ const UploadPage = () => {
           headers: {
             'Content-Type': fileType,
             'Accept': 'text/plain',
+          },
+          onUploadProgress: progressEvent => {
+            const progress = (progressEvent.loaded / progressEvent.total) * 100;
+            console.log(`Content upload progress: ${progress}%`);
           }
         });
         const cleanedContent = cleanedContentResponse.data;
@@ -70,12 +84,16 @@ const UploadPage = () => {
       } catch (error) {
         console.error('Error handling upload response:', error);
         alert('There was an error uploading or indexing the document.');
+      } finally {
+        setLoading(false); // Hide loading when upload completes or fails
       }
     });
 
     uppyRef.current = uppy;
 
-    return () => uppy.close;
+    return () => {
+      uppy.close();
+    };
   }, []);
 
   return (
@@ -86,6 +104,12 @@ const UploadPage = () => {
         <button onClick={() => window.location.href = "/"} className="upload-upload-button">Back to Search</button>
       </div>
       <div id="uppy-dashboard"></div>
+      {loading && (
+        <div className="loading-indicator">
+          <ClipLoader color="#123abc" loading={loading} size={50} />
+          <p>Uploading and processing file...</p>
+        </div>
+      )}
     </div>
   );
 };

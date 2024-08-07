@@ -28,6 +28,7 @@
     "react-instantsearch": "^7.12.1",
     "react-instantsearch-dom": "^6.39.1",
     "react-router-dom": "^6.25.1",
+    "react-spinners": "^0.14.1",
     "uuid": "^10.0.0"
   },
   "devDependencies": {
