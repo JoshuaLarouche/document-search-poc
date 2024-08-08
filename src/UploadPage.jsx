@@ -9,6 +9,7 @@ import logo from "./assets/BCID_H_rgb_pos.png";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import { ClipLoader } from "react-spinners"; // Import the spinner component
+import { Form, Input, Button } from "antd"; // Import Ant Design components
 
 const UploadPage = () => {
   const uppyRef = useRef(null);
@@ -47,15 +48,6 @@ const UploadPage = () => {
         }),
       });
 
-    uppy.on("file-added", (file) => {
-      // Attach metadata to the file
-      console.log("File added to Uppy:", file);
-      // uppy.setFileMeta(file.id, {
-      //   hyperlink: metadataFields.hyperlink,
-      //   additionalField: metadataFields.additionalField,
-      // });
-    });
-
     uppy.on("upload", () => {
       console.log("Upload started");
       setLoading(true); // Show loading when upload starts
@@ -72,13 +64,6 @@ const UploadPage = () => {
     });
 
     uppyRef.current = uppy;
-
-    // uppy.getFiles().forEach(file => {
-    // uppy.setFileMeta(file.id, {
-    //   hyperlink: metadataFields.hyperlink,
-    //   additionalField: metadataFields.additionalField,
-    // })
-    // })
 
     return () => {
       uppy.close;
@@ -170,7 +155,6 @@ const UploadPage = () => {
 
   const handleMetadataChange = (e) => {
     const { name, value } = e.target;
-    console.log("Changing metadata:", { name, value }); // Debugging line
     setMetadataFields((prevFields) => ({
       ...prevFields,
       [name]: value,
@@ -189,33 +173,29 @@ const UploadPage = () => {
           Back to Search
         </button>
       </div>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>
-            Hyperlink to Original File:
-            <input
-              type="text"
-              name="hyperlink"
-              value={metadataFields.hyperlink}
-              onChange={handleMetadataChange}
-              required
-            />
-          </label>
-        </div>
-        {/* Add additional metadata fields here */}
-        <div>
-          <label>
-            Additional Metadata:
-            <input
-              type="text"
-              name="additionalField"
-              value={metadataFields.additionalField}
-              onChange={handleMetadataChange}
-            />
-          </label>
-        </div>
-        <button type="submit">Upload File</button>
-      </form>
+      <Form onSubmitCapture={handleSubmit} layout="vertical">
+        <Form.Item label="Hyperlink to Original File" required>
+          <Input
+            type="text"
+            name="hyperlink"
+            value={metadataFields.hyperlink}
+            onChange={handleMetadataChange}
+          />
+        </Form.Item>
+        <Form.Item label="Additional Metadata">
+          <Input
+            type="text"
+            name="additionalField"
+            value={metadataFields.additionalField}
+            onChange={handleMetadataChange}
+          />
+        </Form.Item>
+        <Form.Item>
+          <Button type="primary" htmlType="submit">
+            Upload File
+          </Button>
+        </Form.Item>
+      </Form>
       <div id="uppy-dashboard"></div>
       {loading && (
         <div className="loading-indicator">

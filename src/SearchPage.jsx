@@ -66,7 +66,19 @@ const Hit = ({ hit }) => (
     <div className="hit-field"><strong>Company:</strong> <Highlight attribute="extended-properties:Company" hit={hit} /></div>
     <div className="hit-field"><strong>Date Created:</strong> {hit["dcterms:created"]}</div>
     <div className="hit-field"><strong>Date Last Modified:</strong> {hit["dcterms:modified"]}</div>
-    <div className="hit-field"><strong>Original File Location:</strong> {hit["hyperlink"]}</div>
+   {/* Render the Original File Location as a hyperlink */}
+   {hit.hyperlink && (
+      <div className="hit-field">
+        <strong>Original File Location: </strong>
+        <a
+          href={hit.hyperlink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {hit.hyperlink}
+        </a>
+      </div>
+    )}
     <div className="hit-field"><strong>Additional Metadata:</strong> {hit["additionalField"]}</div>
     <div className="hit-field"><strong>Content:</strong> <Snippet attribute="X-TIKA:content" hit={hit} tagName="mark" /></div>
   </div>
