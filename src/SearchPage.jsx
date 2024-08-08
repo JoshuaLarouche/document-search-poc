@@ -66,6 +66,8 @@ const Hit = ({ hit }) => (
     <div className="hit-field"><strong>Company:</strong> <Highlight attribute="extended-properties:Company" hit={hit} /></div>
     <div className="hit-field"><strong>Date Created:</strong> {hit["dcterms:created"]}</div>
     <div className="hit-field"><strong>Date Last Modified:</strong> {hit["dcterms:modified"]}</div>
+    <div className="hit-field"><strong>Original File Location:</strong> {hit["hyperlink"]}</div>
+    <div className="hit-field"><strong>Additional Metadata:</strong> {hit["additionalField"]}</div>
     <div className="hit-field"><strong>Content:</strong> <Snippet attribute="X-TIKA:content" hit={hit} tagName="mark" /></div>
   </div>
 );
