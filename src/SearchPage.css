@@ -30,75 +30,75 @@
     margin-left: auto; /* Push button to the right */
 }
   
-  /* Search bar styles */
-  .search-bar {
-    margin-bottom: 5px;
-  }
-  
-  .delineating-line {
-    border: 0;
-    height: 1px;
-    background: orange;
-    margin: 20px 0;
-  }
-  
-  /* Filter section styles */
-  .filter-section {
-    margin-top: 5px;
-  }
-  
-  .filter-options {
-    display: flex;
-    align-items: center;
-    height: auto;
-  }
-  
-  .filter-options h2 {
-    font-size: 1rem;
-    margin-right: 10px;
-  }
-  
-  .ais-RefinementList {
-    display: flex;
-    align-items: center;
-  }
-  
-  .ais-RefinementList-list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding-left: 0;
-  }
-  
-  .ais-RefinementList-item {
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Highlight and snippet styles */
-  .ais-Highlight-highlighted, .ais-Snippet-highlighted,
-  .highlight {
-    background-color: yellow;
-    color: black;
-  }
-  
-  /* Hits styles */
-  .ais-Hits {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  
-  .ais-Hits .hit {
-    flex: 1 0 45%;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-  }
-  
-  .ais-SearchBox {
-    margin-bottom: 20px;
-  }
+/* Search bar styles */
+.search-bar {
+  margin-bottom: 5px;
+}
+
+.delineating-line {
+  border: 0;
+  height: 1px;
+  background: orange;
+  margin: 20px 0;
+}
+
+/* Filter section styles */
+.filter-section {
+  margin-top: 5px;
+}
+
+.filter-options {
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+
+.filter-options h2 {
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.ais-RefinementList {
+  display: flex;
+  align-items: center;
+}
+
+.ais-RefinementList-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-left: 0;
+}
+
+.ais-RefinementList-item {
+  display: flex;
+  align-items: center;
+}
+
+/* Highlight and snippet styles */
+.ais-Highlight-highlighted, .ais-Snippet-highlighted,
+.highlight {
+  background-color: yellow;
+  color: black;
+}
+
+/* Hits styles */
+.ais-Hits {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.ais-Hits .hit {
+  flex: 1 0 45%;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.ais-SearchBox {
+  margin-bottom: 20px;
+}
   

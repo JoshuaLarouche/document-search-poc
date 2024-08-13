@@ -30,3 +30,10 @@
   cursor: pointer; /* Pointer cursor on hover */
   margin-left: auto; /* Push button to the right */
 }
+
+.container {
+  max-width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}

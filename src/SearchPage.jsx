@@ -18,7 +18,7 @@ const searchClient = instantMeiliSearch(
   "https://meilisearch-test.apps.silver.devops.gov.bc.ca",
   "NKeIxVU7wmZGWoCP2XOCbm53APgLfNxdn8BemhMVmDA"
   // "http://localhost:7700",
-  // "ozREe6YsmS6j9UMiLVJX78bKqp0bkGAUe7P2eXzAoEM"
+  // "i8RDbqjtK2d8TtflMZNXiBnkgKK5v0tKl1hXpf1n1qw"
 );
 
 const contentTypeMapping = {
