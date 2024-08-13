@@ -4,12 +4,12 @@ import Dashboard from "@uppy/dashboard";
 import XHRUpload from "@uppy/xhr-upload";
 import "@uppy/core/dist/style.css";
 import "@uppy/dashboard/dist/style.css";
-import "./UploadPage.css";
-import logo from "./assets/BCID_H_rgb_pos.png";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import { ClipLoader } from "react-spinners";
-import { Form, Input, Button } from "antd"; 
+import { Form, Input, Button, Layout } from "antd";
+
+const { Content } = Layout;
 
 const UploadPage = () => {
   const uppyRef = useRef(null);
@@ -167,17 +167,7 @@ const UploadPage = () => {
   };
 
   return (
-    <div className="upload-page">
-      <div className="upload-header">
-        <img src={logo} alt="Logo" className="upload-header-logo" />
-        <h1>Document Upload</h1>
-        <button
-          onClick={() => (window.location.href = "/")}
-          className="upload-upload-button"
-        >
-          Back to Search
-        </button>
-      </div>
+    <Content style={{ padding: '20px' }}>
       <Form onSubmitCapture={handleSubmit} layout="vertical">
         <Form.Item label="Hyperlink to Original File" required>
           <Input
@@ -208,7 +198,7 @@ const UploadPage = () => {
           <p>Uploading and processing file...</p>
         </div>
       )}
-    </div>
+    </Content>
   );
 };
 

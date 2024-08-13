@@ -1,36 +1,34 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import SearchPage from "./SearchPage";
 import UploadPage from "./UploadPage";
-import "./App.css";
-import logo from './assets/BCID_H_rgb_pos.png';
+import Header from "./Header";
+import { Layout } from "antd";
 
-const Header = () => {
-  const location = useLocation();
+const { Header: AntHeader, Content } = Layout;
 
-  if (location.pathname === "/upload") {
-    return null; // No header for the upload page
-  }
+const App = () => {
+  const navigate = useNavigate();
+
+  const renderHeader = () => {
+    const path = window.location.pathname;
+    if (path === "/upload") {
+      return <Header title="Document Upload" buttonText="Back to Search" buttonAction={() => navigate("/")} />;
+    }
+    return <Header title="Document Search Minimum Viable Product" buttonText="Upload" buttonAction={() => navigate("/upload")} />;
+  };
 
   return (
-    <div className="header">
-      <img src={logo} alt="Logo" className="header-logo" />
-      <h1>Document Search Minimum Viable Product</h1>
-      <button onClick={() => window.location.href = "/upload"} className="upload-button">Upload</button>
-    </div>
+    <Layout className="app">
+      {renderHeader()}
+      <Content style={{ padding: '20px' }}>
+        <Routes>
+          <Route path="/" element={<SearchPage />} />
+          <Route path="/upload" element={<UploadPage />} />
+        </Routes>
+      </Content>
+    </Layout>
   );
 };
-
-const App = () => (
-  <Router>
-    <div className="app">
-      <Header />
-      <Routes>
-        <Route path="/" element={<SearchPage />} />
-        <Route path="/upload" element={<UploadPage />} />
-      </Routes>
-    </div>
-  </Router>
-);
 
 export default App;
