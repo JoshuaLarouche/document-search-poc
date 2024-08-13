@@ -7,9 +7,10 @@ import "@uppy/dashboard/dist/style.css";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import { ClipLoader } from "react-spinners";
-import { Form, Input, Button, Layout } from "antd";
+import { Form, Input, Button, Layout, Select } from "antd";
 
 const { Content } = Layout;
+const { Option } = Select;
 
 const UploadPage = () => {
   const uppyRef = useRef(null);
@@ -17,6 +18,7 @@ const UploadPage = () => {
   const [metadataFields, setMetadataFields] = useState({
     hyperlink: "",
     additionalField: "",
+    status: ""  // Default status
   });
 
   useEffect(() => {
@@ -120,6 +122,7 @@ const UploadPage = () => {
         hyperlink: file.meta.hyperlink || metadataFields.hyperlink,
         additionalField:
           file.meta.additionalField || metadataFields.additionalField,
+        status: metadataFields.status // Ensure status is included
       };
 
       console.log("Combined data to be sent to Meilisearch:", combinedData);
@@ -148,10 +151,12 @@ const UploadPage = () => {
     e.preventDefault();
     console.log("Form submitted, starting upload");
     let file = uppyRef.current.getFiles()[0];
+    console.log("MetadataFields:", metadataFields);
     if (file) {
       uppyRef.current.setFileMeta(file.id, {
         hyperlink: metadataFields.hyperlink,
         additionalField: metadataFields.additionalField,
+        status: metadataFields.status // Ensure status is set
       });
     }
     console.log("file:", file);
@@ -163,6 +168,14 @@ const UploadPage = () => {
     setMetadataFields((prevFields) => ({
       ...prevFields,
       [name]: value,
+    }));
+  };
+
+  const handleStatusChange = (value) => {
+    console.log('Selected status:', value); // Log the selected status
+    setMetadataFields((prevFields) => ({
+      ...prevFields,
+      status: value
     }));
   };
 
@@ -184,6 +197,17 @@ const UploadPage = () => {
             value={metadataFields.additionalField}
             onChange={handleMetadataChange}
           />
+        </Form.Item>
+        <Form.Item label="Status">
+          <Select
+            name="status"
+            value={metadataFields.status}
+            onChange={handleStatusChange}
+            style={{ width: 200 }}
+          >
+            <Option value="draft">Draft</Option>
+            <Option value="final">Final</Option>
+          </Select>
         </Form.Item>
         <Form.Item>
           <Button type="primary" htmlType="submit">
