@@ -7,15 +7,16 @@ import {
   Highlight,
   Snippet,
   Configure,
-  RefinementList,
+  connectRefinementList,
 } from "react-instantsearch-dom";
 import { instantMeiliSearch } from "@meilisearch/instant-meilisearch";
 import 'instantsearch.css/themes/satellite.css';
-import { Typography, Divider, Row, Col } from 'antd';
+import { Typography, Divider, Row, Col, Select } from 'antd';
 import "./SearchPage.css";
 import logo from './assets/BCID_H_rgb_pos.png';
 
 const { Text, Link } = Typography;
+const { Option } = Select;
 
 const searchClient = instantMeiliSearch(
   "https://meilisearch-test.apps.silver.devops.gov.bc.ca",
@@ -32,6 +33,33 @@ const contentTypeMapping = {
   "application/json; charset=UTF-8": "Plain Text",
 };
 
+const CustomRefinementList = ({ items, refine }) => {
+  const handleFilterChange = (value) => {
+    if (value) {
+      refine([value]); // Apply the selected filter
+    } else {
+      refine([]); // Clear the filter
+    }
+  };
+
+  return (
+    <Select
+      placeholder="Select a content type"
+      onChange={handleFilterChange}
+      style={{ width: 200 }}
+      allowClear
+    >
+      {Object.entries(contentTypeMapping).map(([key, label]) => (
+        <Option key={key} value={key}>
+          {label}
+        </Option>
+      ))}
+    </Select>
+  );
+};
+
+const ConnectedRefinementList = connectRefinementList(CustomRefinementList);
+
 const SearchPage = () => (
   <div className="ais-InstantSearch">
     <InstantSearch indexName="uppy" searchClient={searchClient}>
@@ -39,15 +67,7 @@ const SearchPage = () => (
       <Divider className="delineating-line" />
       <div className="filter-options">
         <Text strong>Filter by Content Type</Text>
-        <RefinementList
-          attribute="Content-Type"
-          transformItems={(items) =>
-            items.map((item) => ({
-              ...item,
-              label: contentTypeMapping[item.label] || item.label,
-            }))
-          }
-        />
+        <ConnectedRefinementList attribute="Content-Type" />
       </div>
       <div className="right-panel">
         <Stats />
