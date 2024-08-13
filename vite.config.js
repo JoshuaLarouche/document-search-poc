@@ -7,8 +7,8 @@ export default defineConfig({
   server: {
     proxy: {
       '/tika': {
-        target: 'http://localhost:9998',
-        // target: 'https://tika-test.apps.silver.devops.gov.bc.ca/',
+        // target: 'http://localhost:9998',
+        target: 'https://tika-test.apps.silver.devops.gov.bc.ca/',
         changeOrigin: true,
         rewrite: path => path.replace(/^\/tika/, '')
       }
