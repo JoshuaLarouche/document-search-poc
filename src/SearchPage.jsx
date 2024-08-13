@@ -1,18 +1,21 @@
 import React from "react";
-import { 
-  InstantSearch, 
-  InfiniteHits, 
-  SearchBox, 
-  Stats, 
-  Highlight, 
-  Snippet, 
-  Configure, 
-  RefinementList 
+import {
+  InstantSearch,
+  InfiniteHits,
+  SearchBox,
+  Stats,
+  Highlight,
+  Snippet,
+  Configure,
+  RefinementList,
 } from "react-instantsearch-dom";
 import { instantMeiliSearch } from "@meilisearch/instant-meilisearch";
 import 'instantsearch.css/themes/satellite.css';
+import { Typography, Divider, Row, Col } from 'antd';
 import "./SearchPage.css";
 import logo from './assets/BCID_H_rgb_pos.png';
+
+const { Text, Link } = Typography;
 
 const searchClient = instantMeiliSearch(
   "https://meilisearch-test.apps.silver.devops.gov.bc.ca",
@@ -33,13 +36,13 @@ const SearchPage = () => (
   <div className="ais-InstantSearch">
     <InstantSearch indexName="uppy" searchClient={searchClient}>
       <SearchBox />
-      <hr className="delineating-line" />
+      <Divider className="delineating-line" />
       <div className="filter-options">
-        <h2>Filter by Content Type</h2>
-        <RefinementList 
-          attribute="Content-Type" 
-          transformItems={items =>
-            items.map(item => ({
+        <Text strong>Filter by Content Type</Text>
+        <RefinementList
+          attribute="Content-Type"
+          transformItems={(items) =>
+            items.map((item) => ({
               ...item,
               label: contentTypeMapping[item.label] || item.label,
             }))
@@ -59,28 +62,44 @@ const SearchPage = () => (
 
 const Hit = ({ hit }) => (
   <div className="hit" key={hit.id}>
-    <div className="hit-field"><strong>Title:</strong> <Highlight attribute="dc:title" hit={hit} /></div>
-    <div className="hit-field"><strong>Last Author:</strong> <Highlight attribute="meta:last-author" hit={hit} /></div>
-    <div className="hit-field"><strong>Creator:</strong> <Highlight attribute="dc:creator" hit={hit} /></div>
-    <div className="hit-field"><strong>Publisher:</strong> <Highlight attribute="dc:publisher" hit={hit} /></div>
-    <div className="hit-field"><strong>Company:</strong> <Highlight attribute="extended-properties:Company" hit={hit} /></div>
-    <div className="hit-field"><strong>Date Created:</strong> {hit["dcterms:created"]}</div>
-    <div className="hit-field"><strong>Date Last Modified:</strong> {hit["dcterms:modified"]}</div>
-   {/* Render the Original File Location as a hyperlink */}
-   {hit.hyperlink && (
-      <div className="hit-field">
-        <strong>Original File Location: </strong>
-        <a
-          href={hit.hyperlink}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {hit.hyperlink}
-        </a>
-      </div>
-    )}
-    <div className="hit-field"><strong>Additional Metadata:</strong> {hit["additionalField"]}</div>
-    <div className="hit-field"><strong>Content:</strong> <Snippet attribute="X-TIKA:content" hit={hit} tagName="mark" /></div>
+    <Row gutter={[16, 16]}>
+      <Col span={12}>
+        <Text strong>Title: </Text><Highlight attribute="dc:title" hit={hit} />
+      </Col>
+      <Col span={12}>
+        <Text strong>Last Author: </Text><Highlight attribute="meta:last-author" hit={hit} />
+      </Col>
+      <Col span={12}>
+        <Text strong>Creator: </Text><Highlight attribute="dc:creator" hit={hit} />
+      </Col>
+      <Col span={12}>
+        <Text strong>Publisher: </Text><Highlight attribute="dc:publisher" hit={hit} />
+      </Col>
+      <Col span={12}>
+        <Text strong>Company: </Text><Highlight attribute="extended-properties:Company" hit={hit} />
+      </Col>
+      <Col span={12}>
+        <Text strong>Date Created: </Text>{hit["dcterms:created"]}
+      </Col>
+      <Col span={12}>
+        <Text strong>Date Last Modified: </Text>{hit["dcterms:modified"]}
+      </Col>
+      {hit.hyperlink && (
+        <Col span={24}>
+          <Text strong>Original File Location: </Text>
+          <Link href={hit.hyperlink} target="_blank" rel="noopener noreferrer">
+            {hit.hyperlink}
+          </Link>
+        </Col>
+      )}
+      <Col span={24}>
+        <Text strong>Additional Metadata: </Text>{hit["additionalField"]}
+      </Col>
+      <Col span={24}>
+        <Text strong>Content: </Text>
+        <Snippet attribute="X-TIKA:content" hit={hit} tagName="mark" />
+      </Col>
+    </Row>
   </div>
 );
 

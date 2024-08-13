@@ -125,6 +125,11 @@ const UploadPage = () => {
       console.log("Combined data to be sent to Meilisearch:", combinedData);
       console.log("metadataFields:", metadataFields);
 
+      // await axios.post(
+      //   "http://localhost:7700/indexes/uppy/documents",
+      //   combinedData
+      // );
+
       await axios.post(
         "https://meilisearch-test.apps.silver.devops.gov.bc.ca/indexes/uppy/documents",
         combinedData
