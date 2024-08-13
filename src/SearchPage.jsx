@@ -12,8 +12,6 @@ import {
 import { instantMeiliSearch } from "@meilisearch/instant-meilisearch";
 import 'instantsearch.css/themes/satellite.css';
 import { Typography, Divider, Row, Col, Select } from 'antd';
-import "./SearchPage.css";
-import logo from './assets/BCID_H_rgb_pos.png';
 
 const { Text, Link } = Typography;
 const { Option } = Select;

@@ -8,12 +8,12 @@ import "./UploadPage.css";
 import logo from "./assets/BCID_H_rgb_pos.png";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
-import { ClipLoader } from "react-spinners"; // Import the spinner component
-import { Form, Input, Button } from "antd"; // Import Ant Design components
+import { ClipLoader } from "react-spinners";
+import { Form, Input, Button } from "antd"; 
 
 const UploadPage = () => {
   const uppyRef = useRef(null);
-  const [loading, setLoading] = useState(false); // State to manage loading
+  const [loading, setLoading] = useState(false);
   const [metadataFields, setMetadataFields] = useState({
     hyperlink: "",
     additionalField: "",
@@ -40,7 +40,7 @@ const UploadPage = () => {
       })
       .use(XHRUpload, {
         method: "PUT",
-        endpoint: "http://localhost:5173/tika/tika", // This needs to match your backend endpoint
+        endpoint: "http://localhost:5173/tika/tika",
         fieldName: "file",
         headers: (file) => ({
           "Content-Type": file.type,
@@ -140,7 +140,7 @@ const UploadPage = () => {
       console.error("Error handling upload response:", error);
       alert("There was an error uploading or indexing the document.");
     } finally {
-      setLoading(false); // Hide loading when upload completes or fails
+      setLoading(false);
     }
   };
 
