@@ -1,0 +1,42 @@
+  .app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .upload-page {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .upload-header {
+    background-color: navy;
+    color: white;
+    padding: 20px 10px;
+    margin: 0;
+    text-align: left;
+    width: 100vw;
+    box-sizing: border-box;
+    border-bottom: 2px solid orange;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .upload-header-logo {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .upload-upload-button {
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
