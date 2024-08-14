@@ -114,7 +114,7 @@ const Hit = ({ hit }) => (
         <Text strong>Additional Metadata: </Text>{hit["additionalField"]}
       </Col>
       <Col span={24}>
-        <Text strong>Status: </Text>{hit.status} {/* Display status */}
+        <Text strong>Draft Status: </Text>{hit.draftStatus} {/* Display status */}
       </Col>
       <Col span={24}>
         <Text strong>Content: </Text>

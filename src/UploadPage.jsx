@@ -18,7 +18,7 @@ const UploadPage = () => {
   const [metadataFields, setMetadataFields] = useState({
     hyperlink: "",
     additionalField: "",
-    status: ""  // Default status
+    draftStatus: ""  // Default status
   });
 
   useEffect(() => {
@@ -122,7 +122,7 @@ const UploadPage = () => {
         hyperlink: file.meta.hyperlink || metadataFields.hyperlink,
         additionalField:
           file.meta.additionalField || metadataFields.additionalField,
-        status: metadataFields.status // Ensure status is included
+        draftStatus: file.meta.draftStatus || metadataFields.draftStatus // Ensure status is included
       };
 
       console.log("Combined data to be sent to Meilisearch:", combinedData);
@@ -156,10 +156,11 @@ const UploadPage = () => {
       uppyRef.current.setFileMeta(file.id, {
         hyperlink: metadataFields.hyperlink,
         additionalField: metadataFields.additionalField,
-        status: metadataFields.status // Ensure status is set
+        draftStatus: metadataFields.draftStatus // Ensure status is set
       });
     }
     console.log("file:", file);
+    console.log("uppyRef.current.fileData after set in handlesubmit:", uppyRef.current.fileData);
     uppyRef.current.upload();
   };
 
@@ -172,10 +173,10 @@ const UploadPage = () => {
   };
 
   const handleStatusChange = (value) => {
-    console.log('Selected status:', value); // Log the selected status
+    console.log('Selected draftStatus:', value); // Log the selected status
     setMetadataFields((prevFields) => ({
       ...prevFields,
-      status: value
+      draftStatus: value
     }));
   };
 
@@ -198,10 +199,10 @@ const UploadPage = () => {
             onChange={handleMetadataChange}
           />
         </Form.Item>
-        <Form.Item label="Status">
+        <Form.Item label="Draft Status">
           <Select
-            name="status"
-            value={metadataFields.status}
+            name="draftStatus"
+            value={metadataFields.draftStatus}
             onChange={handleStatusChange}
             style={{ width: 200 }}
           >
