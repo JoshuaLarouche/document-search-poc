@@ -9,8 +9,13 @@ import axios from "axios";
 import { ClipLoader } from "react-spinners";
 import { Form, Input, Button, Layout, Select } from "antd";
 
+require("dotenv").config();
+
 const { Content } = Layout;
 const { Option } = Select;
+const APP_URL = process.env.APP_URL;
+const TIKA_URL = process.env.APP_URL; 
+const MEILISEARCH_URL = process.env.APP_URL; 
 
 const UploadPage = () => {
   const uppyRef = useRef(null);
@@ -42,7 +47,7 @@ const UploadPage = () => {
       })
       .use(XHRUpload, {
         method: "PUT",
-        endpoint: "https://document-search-poc-aebbdd-test.apps.silver.devops.gov.bc.ca/tika/tika",
+        endpoint: `${APP_URL}/tika/tika`,
         fieldName: "file",
         headers: (file) => ({
           "Content-Type": file.type,
@@ -78,7 +83,7 @@ const UploadPage = () => {
       console.log("File data to be sent:", fileData);
 
       const metaResponse = await axios.put(
-        "https://document-search-poc-aebbdd-test.apps.silver.devops.gov.bc.ca/tika/tika",
+        `${APP_URL}/tika/tika`,
         fileData,
         {
           headers: {
@@ -97,7 +102,7 @@ const UploadPage = () => {
       console.log("Metadata:", metadata);
 
       const cleanedContentResponse = await axios.put(
-        "https://document-search-poc-aebbdd-test.apps.silver.devops.gov.bc.ca/tika/tika",
+        `${APP_URL}/tika/tika`,
         fileData,
         {
           headers: {
@@ -134,7 +139,7 @@ const UploadPage = () => {
       // );
 
       await axios.post(
-        "https://meilisearch-test.apps.silver.devops.gov.bc.ca/indexes/uppy/documents",
+        `${MEILISEARCH_URL}/indexes/uppy/documents`,
         combinedData
       );
 

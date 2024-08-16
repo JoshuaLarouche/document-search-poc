@@ -30,6 +30,9 @@ COPY --from=build /app/package-lock.json ./
 # Install only production dependencies
 RUN npm ci --only=production
 
+# Copy the env file
+COPY .env.example .env
+
 # Use a lightweight server to serve the build files
 RUN npm install -g serve
 
