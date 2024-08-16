@@ -8,15 +8,15 @@ import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import { ClipLoader } from "react-spinners";
 import { Form, Input, Button, Layout, Select } from "antd";
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 
-dotenv.config();
+// dotenv.config();
 
 const { Content } = Layout;
 const { Option } = Select;
-const APP_URL = process.env.APP_URL;
-const TIKA_URL = process.env.APP_URL; 
-const MEILISEARCH_URL = process.env.APP_URL; 
+const APP_URL = import.meta.env.VITE_APP_URL;
+const TIKA_URL = import.meta.env.VITE_TIKA_URL; 
+const MEILISEARCH_URL = import.meta.env.VITE_MEILISEARCH_URL; 
 
 const UploadPage = () => {
   const uppyRef = useRef(null);
