@@ -8,8 +8,9 @@ import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import { ClipLoader } from "react-spinners";
 import { Form, Input, Button, Layout, Select } from "antd";
+import dotenv from "dotenv";
 
-require("dotenv").config();
+dotenv.config();
 
 const { Content } = Layout;
 const { Option } = Select;
