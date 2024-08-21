@@ -47,7 +47,8 @@ const UploadPage = () => {
       })
       .use(XHRUpload, {
         method: "PUT",
-        endpoint: `${APP_URL}/tika/tika`,
+        // endpoint: `${APP_URL}/tika/tika`,
+        endpoint: `https://document-search-poc-aebbdd-test.apps.silver.devops.gov.bc.ca/tika/tika`,
         fieldName: "file",
         headers: (file) => ({
           "Content-Type": file.type,
@@ -97,7 +98,8 @@ const UploadPage = () => {
       const metadata = metaResponse.data;
 
       const cleanedContentResponse = await axios.put(
-        `${APP_URL}/tika/tika`,
+        // `${APP_URL}/tika/tika`,
+        `https://document-search-poc-aebbdd-test.apps.silver.devops.gov.bc.ca/tika/tika`,
         fileData,
         {
           headers: {
