@@ -4,6 +4,7 @@ import SearchPage from "./SearchPage";
 import UploadPage from "./UploadPage";
 import Header from "./Header";
 import { Layout } from "antd";
+import './global.css'; // Import your global CSS here
 
 const { Header: AntHeader, Content } = Layout;
 

@@ -1,0 +1,29 @@
+body {
+    font-family: 'BC Sans', 'Noto Sans', 'Verdana', 'Arial', 'sans-serif';
+  }
+  
+  .ant-typography, .ant-btn, .ant-input, .ant-select {
+    font-family: 'BC Sans', 'Noto Sans', 'Verdana', 'Arial', 'sans-serif';
+  }
+  .ant-form-item-label > label {
+    font-family: 'BC Sans', 'Noto Sans', 'Verdana', 'Arial', 'sans-serif';
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .text-container {
+    max-width: 75ch; /* Constrain to 75 characters width */
+    word-wrap: break-word; /* Break long words onto the next line */
+    overflow-wrap: break-word; /* Ensure proper text wrapping */
+    /* display: inline-block; Ensure the element respects the max-width */
+  }
+  @media (max-width: 768px) {
+    .header-title {
+      font-size: 1.2rem; /* Adjust size for tablets and smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-title {
+      font-size: 1rem; /* Adjust size for mobile screens */
+    }
+  }
