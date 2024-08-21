@@ -174,7 +174,7 @@ const UploadPage = () => {
 
   return (
     <Content style={{ padding: '20px' }}>
-      <div style={{ backgroundColor: '#f0f2f5', padding: '16px', borderRadius: '8px', marginBottom: '20px', border: '1px solid #d9d9d9' }}>
+      <div style={{ backgroundColor: '#e6f7ff', padding: '16px', borderRadius: '8px', marginBottom: '20px', border: '1px solid #91d5ff' }}>
         <Paragraph style={{ margin: 0 }}>
           Please ensure that your file has not already been uploaded by searching for it in the system before proceeding with the upload.
         </Paragraph>

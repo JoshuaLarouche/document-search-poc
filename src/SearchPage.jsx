@@ -66,7 +66,7 @@ const formatDate = (dateString) => {
 
 const SearchPage = () => (
   <div className="ais-InstantSearch">
-    <div style={{ background: '#f0f2f5', padding: '16px', borderRadius: '8px', marginBottom: '20px' }}>
+    <div style={{ backgroundColor: '#e6f7ff', padding: '16px', borderRadius: '8px', marginBottom: '20px', border: '1px solid #91d5ff' }}>
       <Paragraph style={{ margin: 0 }}>
         Use the search box below to find documents by title, author, or content. You can also filter results by content type using the dropdown menu. The search looks through document metadata and content to help you quickly find what you're looking for.
       </Paragraph>
@@ -113,11 +113,11 @@ const Hit = ({ hit }) => (
         <Text strong>Company: </Text>
         <Text className="text-container"><Highlight attribute="extended-properties:Company" hit={hit} /></Text>
       </Col>
-      <Col span={12}>
+      <Col span={24}>
         <Text strong>Date Created: </Text>
         <Text className="text-container">{formatDate(hit["dcterms:created"])}</Text>
       </Col>
-      <Col span={12}>
+      <Col span={24}>
         <Text strong>Date Last Modified: </Text>
         <Text className="text-container">{formatDate(hit["dcterms:modified"])}</Text>
       </Col>
