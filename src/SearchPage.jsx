@@ -32,7 +32,22 @@ const contentTypeMapping = {
   "application/json; charset=UTF-8": "Plain Text",
 };
 
-const CustomRefinementList = ({ items, refine }) => {
+const documentTypeMapping = {
+  "FDD": "FDD",
+  "Meeting Recording": "Meeting Recording",
+  "Email": "Email",
+  "Board (Collaboration)": "Board (Collaboration)",
+  "TDD": "TDD",
+  "Presentation": "Presentation",
+  "Process Map": "Process Map",
+  "Explainer/Strategy Document": "Explainer/Strategy Document",
+  "Glossary": "Glossary",
+  "Index": "Index",
+  "Code / Logic": "Code / Logic",
+  "Template": "Template",
+};
+
+const CustomRefinementList = ({ items, refine, mapping, placeholder }) => {
   const handleFilterChange = (value) => {
     if (value) {
       refine([value]);
@@ -43,12 +58,12 @@ const CustomRefinementList = ({ items, refine }) => {
 
   return (
     <Select
-      placeholder="Select a content type"
+      placeholder={placeholder}
       onChange={handleFilterChange}
       style={{ width: 200 }}
       allowClear
     >
-      {Object.entries(contentTypeMapping).map(([key, label]) => (
+      {Object.entries(mapping).map(([key, label]) => (
         <Option key={key} value={key}>
           {label}
         </Option>
@@ -57,7 +72,13 @@ const CustomRefinementList = ({ items, refine }) => {
   );
 };
 
-const ConnectedRefinementList = connectRefinementList(CustomRefinementList);
+const ConnectedContentTypeRefinementList = connectRefinementList((props) => (
+  <CustomRefinementList {...props} mapping={contentTypeMapping} placeholder="Select a content type" />
+));
+
+const ConnectedDocumentTypeRefinementList = connectRefinementList((props) => (
+  <CustomRefinementList {...props} mapping={documentTypeMapping} placeholder="Select a document type" />
+));
 
 const formatDate = (dateString) => {
   const date = new Date(dateString);
@@ -68,15 +89,23 @@ const SearchPage = () => (
   <div className="ais-InstantSearch">
     <div style={{ backgroundColor: '#e6f7ff', padding: '16px', borderRadius: '8px', marginBottom: '20px', border: '1px solid #91d5ff' }}>
       <Paragraph style={{ margin: 0 }}>
-        Use the search box below to find documents by title, author, or content. You can also filter results by content type using the dropdown menu. The search looks through document metadata and content to help you quickly find what you're looking for.
+        Use the search box below to find documents by title, author, or content. You can also filter results by content type and document type using the dropdown menus. The search looks through document metadata and content to help you quickly find what you're looking for.
       </Paragraph>
     </div>
     <InstantSearch indexName="uppy" searchClient={searchClient}>
       <SearchBox />
       <Divider className="delineating-line" />
       <div className="filter-options">
-        <Text strong>Filter by Content Type</Text>
-        <ConnectedRefinementList attribute="Content-Type" />
+        <Row gutter={16}>
+          <Col>
+            <Text strong>Filter by Content Type</Text>
+            <ConnectedContentTypeRefinementList attribute="Content-Type" />
+          </Col>
+          <Col>
+            <Text strong>Filter by Document Type</Text>
+            <ConnectedDocumentTypeRefinementList attribute="documentType" />
+          </Col>
+        </Row>
       </div>
       <div className="right-panel">
         <Stats />
@@ -136,6 +165,10 @@ const Hit = ({ hit }) => (
       <Col span={24}>
         <Text strong>Draft Status: </Text>
         <Text className="text-container">{hit.draftStatus}</Text>
+      </Col>
+      <Col span={24}>  {/* New Document Type field */}
+        <Text strong>Document Type: </Text>
+        <Text className="text-container">{hit.documentType}</Text>
       </Col>
       <Col span={24}>
         <Text strong>Content: </Text>

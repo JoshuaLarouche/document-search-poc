@@ -22,7 +22,8 @@ const UploadPage = () => {
   const [metadataFields, setMetadataFields] = useState({
     hyperlink: "",
     additionalField: "",
-    draftStatus: ""
+    draftStatus: "",
+    documentType: "" // New field for document type
   });
 
   useEffect(() => {
@@ -119,7 +120,8 @@ const UploadPage = () => {
         hyperlink: file.meta.hyperlink || metadataFields.hyperlink,
         additionalField:
           file.meta.additionalField || metadataFields.additionalField,
-        draftStatus: file.meta.draftStatus || metadataFields.draftStatus
+        draftStatus: file.meta.draftStatus || metadataFields.draftStatus,
+        documentType: file.meta.documentType || metadataFields.documentType // Include document type in the combined data
       };
 
       console.log("Combined data to be sent to Meilisearch:", combinedData);
@@ -151,7 +153,8 @@ const UploadPage = () => {
       uppyRef.current.setFileMeta(file.id, {
         hyperlink: metadataFields.hyperlink,
         additionalField: metadataFields.additionalField,
-        draftStatus: metadataFields.draftStatus
+        draftStatus: metadataFields.draftStatus,
+        documentType: metadataFields.documentType // Set document type in file metadata
       });
     }
     uppyRef.current.upload();
@@ -169,6 +172,13 @@ const UploadPage = () => {
     setMetadataFields((prevFields) => ({
       ...prevFields,
       draftStatus: value
+    }));
+  };
+
+  const handleDocumentTypeChange = (value) => {
+    setMetadataFields((prevFields) => ({
+      ...prevFields,
+      documentType: value
     }));
   };
 
@@ -205,6 +215,27 @@ const UploadPage = () => {
           >
             <Option value="draft">Draft</Option>
             <Option value="final">Final</Option>
+          </Select>
+        </Form.Item>
+        <Form.Item label="Document Type"> {/* New Document Type dropdown */}
+          <Select
+            name="documentType"
+            value={metadataFields.documentType}
+            onChange={handleDocumentTypeChange}
+            style={{ width: 300 }}
+          >
+            <Option value="FDD">FDD</Option>
+            <Option value="Meeting Recording">Meeting Recording</Option>
+            <Option value="Email">Email</Option>
+            <Option value="Board (Collaboration)">Board (Collaboration)</Option>
+            <Option value="TDD">TDD</Option>
+            <Option value="Presentation">Presentation</Option>
+            <Option value="Process Map">Process Map</Option>
+            <Option value="Explainer/Strategy Document">Explainer/Strategy Document</Option>
+            <Option value="Glossary">Glossary</Option>
+            <Option value="Index">Index</Option>
+            <Option value="Code / Logic">Code / Logic</Option>
+            <Option value="Template">Template</Option>
           </Select>
         </Form.Item>
         <Form.Item>
