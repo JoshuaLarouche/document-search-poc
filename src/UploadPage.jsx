@@ -7,13 +7,11 @@ import "@uppy/dashboard/dist/style.css";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import { ClipLoader } from "react-spinners";
-import { Form, Input, Button, Layout, Select } from "antd";
-// import dotenv from "dotenv";
-
-// dotenv.config();
+import { Form, Input, Button, Layout, Select, notification, Typography } from "antd";
 
 const { Content } = Layout;
 const { Option } = Select;
+const { Paragraph } = Typography;
 const APP_URL = import.meta.env.VITE_APP_URL;
 const TIKA_URL = import.meta.env.VITE_TIKA_URL; 
 const MEILISEARCH_URL = import.meta.env.VITE_MEILISEARCH_URL; 
@@ -24,7 +22,7 @@ const UploadPage = () => {
   const [metadataFields, setMetadataFields] = useState({
     hyperlink: "",
     additionalField: "",
-    draftStatus: ""  // Default status
+    draftStatus: ""
   });
 
   useEffect(() => {
@@ -57,18 +55,20 @@ const UploadPage = () => {
       });
 
     uppy.on("upload", () => {
-      console.log("Upload started");
-      setLoading(true); // Show loading when upload starts
+      setLoading(true);
     });
 
     uppy.on("upload-success", (file, response) => {
-      console.log("Upload successful:", response);
       handleUploadSuccess(file, response);
     });
 
     uppy.on("upload-error", (file, error) => {
       console.error("Upload error:", error);
       setLoading(false);
+      notification.error({
+        message: "Upload Failed",
+        description: "There was an error uploading the document.",
+      });
     });
 
     uppyRef.current = uppy;
@@ -81,26 +81,19 @@ const UploadPage = () => {
   const handleUploadSuccess = async (file, response) => {
     try {
       const fileData = file.data || response.body || response;
-      console.log("File data to be sent:", fileData);
 
-      const metaResponse = await axios.put(
-        `${APP_URL}/tika/tika`,
-        fileData,
-        {
-          headers: {
-            "Content-Type": file.type,
-            Accept: "application/json",
-          },
-          onUploadProgress: (progressEvent) => {
-            const progress = (progressEvent.loaded / progressEvent.total) * 100;
-            console.log(`Meta upload progress: ${progress}%`);
-          },
-        }
-      );
-      console.log("Meta response:", metaResponse);
+      const metaResponse = await axios.put(`${APP_URL}/tika/tika`, fileData, {
+        headers: {
+          "Content-Type": file.type,
+          Accept: "application/json",
+        },
+        onUploadProgress: (progressEvent) => {
+          const progress = (progressEvent.loaded / progressEvent.total) * 100;
+          console.log(`Meta upload progress: ${progress}%`);
+        },
+      });
 
       const metadata = metaResponse.data;
-      console.log("Metadata:", metadata);
 
       const cleanedContentResponse = await axios.put(
         `${APP_URL}/tika/tika`,
@@ -116,10 +109,8 @@ const UploadPage = () => {
           },
         }
       );
-      console.log("Cleaned content response:", cleanedContentResponse);
 
       const cleanedContent = cleanedContentResponse.data;
-      console.log("Cleaned content:", cleanedContent);
 
       const combinedData = {
         ...metadata,
@@ -128,26 +119,26 @@ const UploadPage = () => {
         hyperlink: file.meta.hyperlink || metadataFields.hyperlink,
         additionalField:
           file.meta.additionalField || metadataFields.additionalField,
-        draftStatus: file.meta.draftStatus || metadataFields.draftStatus // Ensure status is included
+        draftStatus: file.meta.draftStatus || metadataFields.draftStatus
       };
 
       console.log("Combined data to be sent to Meilisearch:", combinedData);
-      console.log("metadataFields:", metadataFields);
-
-      // await axios.post(
-      //   "http://localhost:7700/indexes/uppy/documents",
-      //   combinedData
-      // );
 
       await axios.post(
         `${MEILISEARCH_URL}/indexes/uppy/documents`,
         combinedData
       );
 
-      alert("Document uploaded and indexed successfully!");
+      notification.success({
+        message: "Upload Successful",
+        description: "Document uploaded and indexed successfully!",
+      });
     } catch (error) {
       console.error("Error handling upload response:", error);
-      alert("There was an error uploading or indexing the document.");
+      notification.error({
+        message: "Upload Failed",
+        description: "There was an error uploading or indexing the document.",
+      });
     } finally {
       setLoading(false);
     }
@@ -155,18 +146,14 @@ const UploadPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted, starting upload");
-    let file = uppyRef.current.getFiles()[0];
-    console.log("MetadataFields:", metadataFields);
+    const file = uppyRef.current.getFiles()[0];
     if (file) {
       uppyRef.current.setFileMeta(file.id, {
         hyperlink: metadataFields.hyperlink,
         additionalField: metadataFields.additionalField,
-        draftStatus: metadataFields.draftStatus // Ensure status is set
+        draftStatus: metadataFields.draftStatus
       });
     }
-    console.log("file:", file);
-    console.log("uppyRef.current.fileData after set in handlesubmit:", uppyRef.current.fileData);
     uppyRef.current.upload();
   };
 
@@ -179,7 +166,6 @@ const UploadPage = () => {
   };
 
   const handleStatusChange = (value) => {
-    console.log('Selected draftStatus:', value); // Log the selected status
     setMetadataFields((prevFields) => ({
       ...prevFields,
       draftStatus: value
@@ -188,6 +174,11 @@ const UploadPage = () => {
 
   return (
     <Content style={{ padding: '20px' }}>
+      <div style={{ backgroundColor: '#f0f2f5', padding: '16px', borderRadius: '8px', marginBottom: '20px', border: '1px solid #d9d9d9' }}>
+        <Paragraph style={{ margin: 0 }}>
+          Please ensure that your file has not already been uploaded by searching for it in the system before proceeding with the upload.
+        </Paragraph>
+      </div>
       <Form onSubmitCapture={handleSubmit} layout="vertical">
         <Form.Item label="Hyperlink to Original File" required>
           <Input

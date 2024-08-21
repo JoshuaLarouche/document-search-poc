@@ -14,7 +14,7 @@ import 'instantsearch.css/themes/satellite.css';
 import { Typography, Divider, Row, Col, Select } from 'antd';
 import './global.css'; // Import the global CSS file
 
-const { Text, Link } = Typography;
+const { Text, Link, Paragraph } = Typography;
 const { Option } = Select;
 
 const searchClient = instantMeiliSearch(
@@ -35,9 +35,9 @@ const contentTypeMapping = {
 const CustomRefinementList = ({ items, refine }) => {
   const handleFilterChange = (value) => {
     if (value) {
-      refine([value]); // Apply the selected filter
+      refine([value]);
     } else {
-      refine([]); // Clear the filter
+      refine([]);
     }
   };
 
@@ -61,11 +61,16 @@ const ConnectedRefinementList = connectRefinementList(CustomRefinementList);
 
 const formatDate = (dateString) => {
   const date = new Date(dateString);
-  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }); // Formats the date as MM/DD/YYYY
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 };
 
 const SearchPage = () => (
   <div className="ais-InstantSearch">
+    <div style={{ background: '#f0f2f5', padding: '16px', borderRadius: '8px', marginBottom: '20px' }}>
+      <Paragraph style={{ margin: 0 }}>
+        Use the search box below to find documents by title, author, or content. You can also filter results by content type using the dropdown menu. The search looks through document metadata and content to help you quickly find what you're looking for.
+      </Paragraph>
+    </div>
     <InstantSearch indexName="uppy" searchClient={searchClient}>
       <SearchBox />
       <Divider className="delineating-line" />
