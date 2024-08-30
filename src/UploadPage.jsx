@@ -48,7 +48,7 @@ const UploadPage = () => {
       .use(XHRUpload, {
         method: "PUT",
         // endpoint: `${TIKA_URL}`,
-        endpoint: `https://document-search-poc-aebbdd-test.apps.silver.devops.gov.bc.ca/proxy`,
+        endpoint: `https://document-search-poc-aebbdd-test.apps.silver.devops.gov.bc.ca/tika`,
         fieldName: "file",
         headers: (file) => ({
           "Content-Type": file.type,
@@ -86,7 +86,7 @@ const UploadPage = () => {
 
       const metaResponse = await axios.put(
         // `${TIKA_URL}`,
-        `https://document-search-poc-aebbdd-test.apps.silver.devops.gov.bc.ca/proxy`,
+        `https://document-search-poc-aebbdd-test.apps.silver.devops.gov.bc.ca/tika`,
          fileData, {
         headers: {
           "Content-Type": file.type,
@@ -102,7 +102,7 @@ const UploadPage = () => {
 
       const cleanedContentResponse = await axios.put(
         // `${TIKA_URL}`,
-        `https://document-search-poc-aebbdd-test.apps.silver.devops.gov.bc.ca/proxy`,
+        `https://document-search-poc-aebbdd-test.apps.silver.devops.gov.bc.ca/tika`,
         fileData,
         {
           headers: {
@@ -191,7 +191,7 @@ const UploadPage = () => {
     <Content style={{ padding: '20px' }}>
       <div style={{ backgroundColor: '#e6f7ff', padding: '16px', borderRadius: '8px', marginBottom: '20px', border: '1px solid #91d5ff' }}>
         <Paragraph style={{ margin: 0 }}>
-          blah Please ensure that your file has not already been uploaded by searching for it in the system before proceeding with the upload.
+          Please ensure that your file has not already been uploaded by searching for it in the system before proceeding with the upload.
         </Paragraph>
       </div>
       <Form onSubmitCapture={handleSubmit} layout="vertical">
