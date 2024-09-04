@@ -48,7 +48,7 @@ const UploadPage = () => {
       .use(XHRUpload, {
         method: "PUT",
         // endpoint: `${TIKA_URL}`,
-        endpoint: `https://document-search-poc-aebbdd-test.apps.silver.devops.gov.bc.ca/tika`,
+        endpoint: `https://search-tool-aebbdd-test.apps.silver.devops.gov.bc.ca/tika`,
         fieldName: "file",
         headers: (file) => ({
           "Content-Type": file.type,
@@ -86,7 +86,7 @@ const UploadPage = () => {
 
       const metaResponse = await axios.put(
         // `${TIKA_URL}`,
-        `https://document-search-poc-aebbdd-test.apps.silver.devops.gov.bc.ca/tika`,
+        `https://search-tool-aebbdd-test.apps.silver.devops.gov.bc.ca/tika`,
          fileData, {
         headers: {
           "Content-Type": file.type,
@@ -102,7 +102,7 @@ const UploadPage = () => {
 
       const cleanedContentResponse = await axios.put(
         // `${TIKA_URL}`,
-        `https://document-search-poc-aebbdd-test.apps.silver.devops.gov.bc.ca/tika`,
+        `https://search-tool-aebbdd-test.apps.silver.devops.gov.bc.ca/tika`,
         fileData,
         {
           headers: {
